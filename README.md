@@ -44,3 +44,8 @@ The frontend for customers for anikela project
 <br>
 <br>
 <br>
+
+## Commit message convention
+
+- Use Past tense <br>
+  Guidelines to follow at https://www.conventionalcommits.org/en/v1.0.0-beta.2/
