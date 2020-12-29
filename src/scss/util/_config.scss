@@ -1,0 +1,30 @@
+/*
+General configuration file for theming 
+and overriding bootstrap styles
+*/
+
+// Colors
+
+$primary: rgb(243, 159, 174);
+$secondary: rgb(28, 33, 64);
+$light: rgb(255, 255, 255);
+$dark: rgb(1, 2, 12);
+
+// Gradients
+$gradient-with-angle: linear-gradient(167.95deg, #f39fae 0%, #88b4e1 100%);
+$gradient-no-angle: linear-gradient(to right, #f39fae 50%, #88b4e1 100%);
+
+// Fonts
+// custom font
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Poppins",
+  "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  "Liberation Mono", "Courier New", monospace;
+$font-family-base: $font-family-sans-serif;
+
+// Links
+// Style anchor elements.
+$link-color: $dark;
+$link-decoration: none;
+$link-hover-decoration: none;
