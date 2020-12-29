@@ -1,0 +1,8 @@
+// NOTE: partials should always be above bootstrap import.
+// in order to allowf or easy style overide
+// import partials here
+@import "./base/reset";
+@import "./util/config";
+
+// Bootstrap import
+@import "~bootstrap/scss/bootstrap";
