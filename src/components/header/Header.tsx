@@ -1,8 +1,9 @@
 import React from "react";
+import "./header.scss";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <MiniNav />
     </header>
   );
@@ -10,12 +11,12 @@ const Header = () => {
 
 const MiniNav = () => {
   return (
-    <nav className="">
+    <nav className="mini-nav d-flex justify-content-between bg-dark px-5 py-1">
       <span className="">
-        <span className="text-primary ">Location</span>
+        <span className="text-primary">Location</span>
         {/* still requires a dropdown for site currency conversion */}
       </span>
-      <span className="fs-1 text-primary ">Care-line +09074348485</span>
+      <span className="text-primary ">Care-line +09074348485</span>
     </nav>
   );
 };
