@@ -26,18 +26,27 @@ const MiniNav = () => {
 
 const MainNav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="main-nav navbar navbar-expand-lg navbar-light bg-light px-5">
       <div className="navbar-brand">
-        <img src={logo} alt="Anikela logo" />
+        <img src={logo} alt="Anikela logo" className="logo" />
       </div>
-      <div className="navbar-nav main-nav__link-group">
-        <Link to="products/women" className="nav-link active">
+      <div className="navbar-nav main-nav__link-group ">
+        <Link to="products/women" className="main-nav__link nav-link active">
           women
         </Link>
-        <Link to="products/men" className="nav-link">
+        <Link to="products/men" className="main-nav__link nav-link">
           men
         </Link>
       </div>
+      <form className="main-nav__search">
+        <input
+          className="form-control search-box"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <span className="search-icon">@</span>
+      </form>
     </nav>
   );
 };
