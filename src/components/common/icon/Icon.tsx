@@ -11,16 +11,12 @@ interface IconProps {
   title: string;
 }
 
-// some default styling
-const defaultStyles = { display: "inline-block", verticalAlign: "middle" };
-
 const Icon: React.FC<IconProps> = (props) => {
   const { size, fill, icon, className, style, viewBox, title } = props;
-  const styles = { ...defaultStyles, ...style };
   return (
     <svg
       className={className}
-      style={styles}
+      style={style}
       viewBox={viewBox}
       width={`${size}px`}
       height={`${size}px`}
