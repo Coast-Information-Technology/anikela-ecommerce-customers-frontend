@@ -1,8 +1,12 @@
 // NOTE: partials should always be above bootstrap import.
 // in order to allowf or easy style overide
+
+// import Poppins font-face from google font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
 // import partials here
-@import "./base/reset";
 @import "./util/config";
+@import "./base/reset";
 
 // Bootstrap import
 @import "~bootstrap/scss/bootstrap";
