@@ -13,7 +13,7 @@ const Header = () => {
 
 const MiniNav = () => {
   return (
-    <nav className="mini-nav d-flex justify-content-between bg-dark px-5 py-1">
+    <nav className="mini-nav">
       <span className="">
         <span className="text-primary">Location</span>
         {/* still requires a dropdown for site currency conversion */}
@@ -25,19 +25,19 @@ const MiniNav = () => {
 
 const MainNav = () => {
   return (
-    <nav className="main-nav navbar navbar-expand-lg navbar-light bg-light px-5 py-4">
+    <nav className="main-nav">
       <Link to="/" className="navbar-brand">
         <img src={logo} alt="Anikela logo" className="logo" />
       </Link>
-      <div className="navbar-nav main-nav__link-group me-3">
-        <Link to="products/women" className="main-nav__link nav-link">
+      <div className="main-nav__link-group">
+        <Link to="products/women" className="main-nav__link">
           women
         </Link>
-        <Link to="products/men" className="main-nav__link nav-link">
+        <Link to="products/men" className="main-nav__link">
           men
         </Link>
       </div>
-      <form className="main-nav__search nav-item align-items-center">
+      <form className="main-nav__search">
         <input
           id="search"
           name="query"
@@ -51,7 +51,7 @@ const MainNav = () => {
           aria-expanded="false"
           maxLength={150}
         />
-        <button type="submit" className="search-btn rounded-circle">
+        <button type="submit" className="search-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -64,10 +64,10 @@ const MainNav = () => {
           </svg>
         </button>
       </form>
-      <div className="nav-item main-nav__utilities d-flex justify-content-between align-items-center">
+      <div className="main-nav__utilities">
         <Link to="dashboard">
           <div className="nav-util d-flex ">
-            <span className="nav-util__txt me-2 fs-6">Sign In</span>
+            <span className="nav-util__txt">Sign In</span>
             <span className="nav-util__img">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const MainNav = () => {
           </div>
         </Link>
         <Link to="wishlist">
-          <div className="nav-item nav-util wishlist">
+          <div className="nav-util wishlist">
             <span className="nav-util__img">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -107,10 +107,8 @@ const MainNav = () => {
           </div>
         </Link>
         <Link to="shopping-cart">
-          <div className="nav-item nav-util position-relative">
-            <div className="notification position-absolute top-0 end-0 text-center bg-dark text-primary shadow rounded-circle">
-              3
-            </div>
+          <div className="nav-util">
+            <div className="notification">3</div>
             <span className="nav-util__img">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
