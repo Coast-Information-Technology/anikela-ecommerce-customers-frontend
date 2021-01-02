@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 import logo from "../../assets/resources/logo.svg";
+import { log } from "console";
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
   );
 };
 
-const MiniNav = () => {
+const MiniNav: React.FC = () => {
   return (
     <nav className="mini-nav">
       <span className="mini-nav__location">
@@ -24,8 +25,8 @@ const MiniNav = () => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
             aria-haspopup="true"
-            role="menu"
           >
+            Hello
             <Icon
               icon="caret-down"
               size={16}
@@ -33,6 +34,7 @@ const MiniNav = () => {
               title="change your location"
             />
           </div>
+
           <ul
             className="location-dropdown__dropdown-menu dropdown-menu"
             aria-labelledby="dropdownMenu"
