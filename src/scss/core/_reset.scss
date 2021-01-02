@@ -1,0 +1,28 @@
+/*
+ contains style overrides relating to the browser dom
+*/
+
+/*
+Overides the (x) icon on Webkit browsers (Chrome,Safari,Opera)
+for input elements of type search
+*/
+input[type="search"]::-webkit-search-cancel-button {
+  // TODO proper styling and use of icons will be added later
+  display: none;
+}
+
+/*
+rule set that cleverly hides the content from the viewer
+but allows for screen readers to still have access
+to the content for accesibility purposes
+*/
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
