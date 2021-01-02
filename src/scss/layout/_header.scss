@@ -70,6 +70,7 @@
     font-weight: 500;
     border: 2px solid rgba($color: #000000, $alpha: 0.1);
     outline: none;
+    @extend .form-control, .rounded-pill, .py-2;
   }
 
   .search-btn {
