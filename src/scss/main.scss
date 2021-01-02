@@ -5,8 +5,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 // import partials here
+
+// utilities
 @import "./util/config";
-@import "./base/reset";
+
+// core
+@import "./core/reset";
+@import "./core/typography";
+
+// components
+@import "components/buttons";
+
+// layout
+@import "./layout/header";
+
+// pages
+@import "./pages/home";
+
+// sections
+@import "./sections/cta";
 
 // Bootstrap import
 @import "~bootstrap/scss/bootstrap";
