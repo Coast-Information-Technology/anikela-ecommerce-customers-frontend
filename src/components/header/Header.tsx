@@ -44,7 +44,7 @@ const MainNav = () => {
           name="query"
           role="combobox"
           autoComplete="off"
-          className="form-control search-box rounded-pill py-2"
+          className="search-box"
           type="search"
           placeholder="Search for clothes, cosmetics or styles"
           aria-label="Search"
