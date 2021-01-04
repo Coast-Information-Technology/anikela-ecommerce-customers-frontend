@@ -22,16 +22,6 @@
 .location-dropdown__text {
   @extend .text-primary, .me-2;
 }
-.location-dropdown__toggle {
-  color: $accent;
-  cursor: pointer;
-}
-.location-dropdown__icon {
-  @extend .ms-1;
-}
-.location-dropdown__dropdown-menu {
-  @extend .rounded-1, .shadow-lg, .border-0;
-}
 // main navigation styles
 .main-nav {
   width: 100%;
@@ -96,7 +86,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    @extend .rounded-circle, .position-absolute;
+    @extend .rounded-circle, .position-absolute, .p-0;
     background-color: transparent;
     .icon {
       position: absolute;
