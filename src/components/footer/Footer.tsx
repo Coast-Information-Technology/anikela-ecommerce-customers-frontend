@@ -145,10 +145,22 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div className="footer-icons__payment">
-          <img src={paypalImage} className="footer-icon--img paypal" />
-          <img src={aeImage} className="footer-icon--img american-express" />
-          <img src={visaImage} className="footer-icon--img visa" />
-          <img src={mcImage} className="footer-icon--img mastercard" />
+          <img
+            src={paypalImage}
+            alt="paypal"
+            className="footer-icon--img paypal"
+          />
+          <img
+            src={aeImage}
+            alt="american-express"
+            className="footer-icon--img american-express"
+          />
+          <img src={visaImage} alt="visa" className="footer-icon--img visa" />
+          <img
+            src={mcImage}
+            alt="master-card"
+            className="footer-icon--img mastercard"
+          />
         </div>
       </div>
       <div className="legal">
