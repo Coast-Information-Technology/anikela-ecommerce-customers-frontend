@@ -67,20 +67,6 @@
   // cursor: pointer;
 }
 
-@media (max-width: 767.98px) {
-  .footer-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-group.subscribe {
-    text-align: center;
-  }
-  .footer-item {
-    text-align: center;
-  }
-}
-
 .footer-icons {
   height: auto;
   @extend .row, .flex-lg-row, .flex-sm-column, .align-items-center, .py-5;
