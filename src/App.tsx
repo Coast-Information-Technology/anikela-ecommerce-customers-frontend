@@ -9,11 +9,9 @@ function App() {
   return (
     <BrowserRouter>
 
-      {/* <Header /> */}
+      <Header />
       <Homepage />
       <div></div>
-
-      <Header />
       <div style={{ height: "600px" }}></div>
       <Footer />
 
