@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
               size={26}
             />
           </a> */}
-          <a className="footer-icon twitter">
+          <a href="https://www.twitter.com/" className="footer-icon twitter">
             <Icon
               icon="twitter"
               title="follow us on twitter"
@@ -134,7 +134,10 @@ const Footer: React.FC = () => {
               size={26}
             />
           </a>
-          <a className="footer-icon pinterest">
+          <a
+            href="https://www.pinterest.com/"
+            className="footer-icon pinterest"
+          >
             <Icon
               icon="pinterest"
               title="follow us on pinterest"
