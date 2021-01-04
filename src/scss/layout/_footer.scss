@@ -1,0 +1,142 @@
+/* footer */
+
+.footer {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  background: #ffffff;
+  @extend .container;
+}
+
+.footer-group-container {
+  width: 100%;
+  height: auto;
+  @extend .row, .pb-5;
+}
+
+.footer-group {
+  @extend .col-lg-3, .col-md-4, .col-sm-6;
+  margin-bottom: 2rem;
+}
+
+.footer-group.subscribe {
+  @extend .col-lg-3, .col-md-12, .col-sm-6;
+}
+
+.footer-group .footer-input {
+  @extend .form-control, .m-0;
+}
+
+.footer-group-header {
+  // font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.footer-group-links {
+  width: 100%;
+  height: auto;
+  @extend .p-0;
+}
+.footer-item {
+  margin: 0.4rem 0;
+}
+.footer-link {
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: color 0.5s ease;
+}
+.footer-link:hover {
+  color: $primary;
+}
+
+// .footer-input {
+//   padding: 0.6rem 1rem;
+//   font-weight: 500;
+//   border: 2px solid $primary;
+//   margin-top: 2rem;
+//   border-radius: 4px;
+//   font-size: 14px;
+// }
+.footer-btn {
+  display: block;
+  background-color: $dark;
+  color: $primary;
+  /* color: #fff; */
+  // border-radius: 4px;
+  // cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .footer-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-group.subscribe {
+    text-align: center;
+  }
+  .footer-item {
+    text-align: center;
+  }
+}
+
+.footer-icons {
+  height: auto;
+  @extend .row, .flex-lg-row, .flex-sm-column, .align-items-center, .py-5;
+}
+
+.footer-icons__social {
+  @extend .col-lg-6, .col-md-12, .d-flex;
+}
+.footer-icons__payment {
+  @extend .col-lg-6, .col-md-12, .d-flex, .justify-content-end;
+}
+
+.footer-icon {
+  @extend .mx-4;
+}
+.footer-icon:nth-child(1) {
+  @extend .ms-0;
+}
+.footer-icon--img {
+  width: 2rem;
+  @extend .footer-icon;
+}
+.footer-icon:last-child {
+  @extend .me-0;
+}
+
+.legal {
+  width: 100%;
+  @extend .d-flex,
+    .flex-column-reverse,
+    .flex-md-row,
+    .flex-sm-column-reverse,
+    .pb-3;
+}
+.copyright {
+  display: block;
+  font-size: 14px;
+  @extend .align-self-sm-center;
+}
+
+.legalities {
+  width: 100%;
+  @extend .d-flex, .p-0;
+  justify-content: space-between;
+}
+
+.legalities .links {
+  font-size: 14px;
+  // @media only screen and (max-width: 768px) {
+  //   & {
+  //     // float: left;
+  //     margin: 0 auto;
+  //   }
+  // }
+}
+
+.legalities .links a {
+  color: $primary;
+}
