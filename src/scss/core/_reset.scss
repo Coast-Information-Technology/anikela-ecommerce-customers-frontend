@@ -2,6 +2,9 @@
  contains style overrides relating to the browser dom
 */
 
+ul {
+  list-style-type: none;
+}
 /*
 Overides the (x) icon on Webkit browsers (Chrome,Safari,Opera)
 for input elements of type search

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { SyntheticEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 import logo from "../../assets/resources/logo.svg";
+import { log } from "console";
 
 const Header = () => {
   return (
@@ -12,12 +13,44 @@ const Header = () => {
   );
 };
 
-const MiniNav = () => {
+const MiniNav: React.FC = () => {
   return (
     <nav className="mini-nav">
-      <span className="">
-        <span className="text-primary">Location</span>
-        {/* still requires a dropdown for site currency conversion */}
+      <span className="mini-nav__location">
+        <span className="location-dropdown__text">Location</span>
+        <div className="location-dropdown dropdown">
+          <div
+            className="location-dropdown__toggle"
+            id="dropdownMenu"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            Hello
+            <Icon
+              icon="caret-down"
+              size={16}
+              className="location-dropdown__icon"
+              title="change your location"
+            />
+          </div>
+
+          <ul
+            className="location-dropdown__dropdown-menu dropdown-menu"
+            aria-labelledby="dropdownMenu"
+          >
+            <li>
+              <a className="dropdown-item  fs-6" href="#">
+                NGN &#8358;
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item fs-6" href="#">
+                UK &#163;
+              </a>
+            </li>
+          </ul>
+        </div>
       </span>
       <span className="text-primary ">Care-line +09074348485</span>
     </nav>
@@ -44,7 +77,7 @@ const MainNav = () => {
           name="query"
           role="combobox"
           autoComplete="off"
-          className="form-control search-box rounded-pill py-2"
+          className="search-box"
           type="search"
           placeholder="Search for clothes, cosmetics or styles"
           aria-label="Search"
