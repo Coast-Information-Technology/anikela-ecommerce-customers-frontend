@@ -96,11 +96,9 @@ const Footer: React.FC = () => {
           </p>
           <form className="footer-group__form" action="#">
             <input type="text" className="footer-input" />
-            <button
-              type="submit"
-              className="footer-btn"
-              value="subscribe"
-            ></button>
+            <button type="submit" className="footer-btn" value="subscribe">
+              subscribe
+            </button>
           </form>
         </div>
       </div>

@@ -50,21 +50,12 @@
   color: $primary;
 }
 
-// .footer-input {
-//   padding: 0.6rem 1rem;
-//   font-weight: 500;
-//   border: 2px solid $primary;
-//   margin-top: 2rem;
-//   border-radius: 4px;
-//   font-size: 14px;
-// }
+.footer-input {
+  @extend .form-control, .form-control-lg;
+  caret-color: $primary;
+}
 .footer-btn {
-  display: block;
-  background-color: $dark;
-  color: $primary;
-  /* color: #fff; */
-  // border-radius: 4px;
-  // cursor: pointer;
+  @extend .btn, .btn-secondary, .mt-3;
 }
 
 .footer-icons {
