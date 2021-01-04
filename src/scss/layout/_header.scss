@@ -25,7 +25,7 @@
 // main navigation styles
 .main-nav {
   width: 100%;
-  height: 45px;
+  height: auto;
   @extend .navbar,
     .align-items-center,
     .navbar-expand-lg,
@@ -37,7 +37,7 @@
 
 .main-nav__link-group {
   flex: 2;
-  @extend .navbar-nav, .align-items-center, .me-3;
+  @extend .navbar-nav, .align-items-center, .d-none, .d-lg-flex;
 }
 
 .main-nav__link {
@@ -74,14 +74,14 @@
 // Search bar styles
 .main-nav__search {
   flex: 5;
-  @extend .nav-item, .position-relative;
+  @extend .nav-item, .position-relative, .mx-4;
 
   .search-box {
     width: 100%;
     font-weight: 500;
     border: 2px solid rgba($color: #000000, $alpha: 0.1);
     outline: none;
-    @extend .form-control, .rounded-pill, .pe-5, .fs-6;
+    @extend .form-control, .rounded-pill, .pe-5, .fs-6, .d-md-block, .d-none;
   }
 
   .search-btn {
@@ -99,14 +99,21 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
 .main-nav__utilities {
   height: inherit;
   flex: 3;
-  padding-left: 45px;
-  @extend .nav-item, .d-flex, .justify-content-between, .align-items-center;
+  @extend .nav-item,
+    .d-flex,
+    .justify-content-between,
+    .align-items-center,
+    .d-none,
+    .d-md-flex;
 }
 
 .notification {
@@ -127,10 +134,10 @@
     .rounded-circle;
 }
 .nav-util {
-  @extend .nav-item, .position-relative;
+  @extend .position-relative;
 }
 .nav-util__txt {
-  @extend .me-2, .fs-6;
+  @extend .me-2, .fs-6, .d-md-block, .d-sm-none;
 }
 .nav-util__img:hover {
   color: $primary;

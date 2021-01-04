@@ -82,7 +82,7 @@ const MainNav = () => {
             </span>
           </div>
         </Link>
-        <Link to="wishlist">
+        <Link to="wishlist" className="">
           <div className="nav-util">
             <Icon
               icon="wishlist"
