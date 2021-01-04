@@ -167,7 +167,9 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="footnote">
-        <p className="col footnote-copyright">&copy;Copyright Anikela {}</p>
+        <p className="col footnote-copyright">
+          &copy;Copyright Anikela {new Date().getFullYear()}
+        </p>
 
         <ul className="col footnote-links">
           <li className="footnote-item">
