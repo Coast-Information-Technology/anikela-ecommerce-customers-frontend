@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 
-// asset
+// assets
 import paypalImage from "../../assets/images/paypa-mini.png";
 import aeImage from "../../assets/images/american-express-mini.png";
 import visaImage from "../../assets/images/visa-mini.png";
@@ -15,27 +16,29 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">Need some Help</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="">Help</a>
+              <Link className="footer-link" to="">
+                Help
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Track order
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Delivery & Returns policies
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Customer Service
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -43,24 +46,24 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">About Anikela</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 About us
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Careers at Anikela
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Investors
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Terms and Conditions
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -68,24 +71,24 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">More to know</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Gift Vouchers
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Anikela brands
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Coupons
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -96,11 +99,9 @@ const Footer: React.FC = () => {
           </p>
           <form className="footer-group__form" action="#">
             <input type="text" className="footer-input" />
-            <button
-              type="submit"
-              className="footer-btn"
-              value="subscribe"
-            ></button>
+            <button type="submit" className="footer-btn" value="subscribe">
+              subscribe
+            </button>
           </form>
         </div>
       </div>
@@ -115,16 +116,19 @@ const Footer: React.FC = () => {
               size={26}
             />
           </a>
-          {/* <a className="social-icon instagram">
+          <a
+            href="https://www.instagram.com/"
+            className="footer-icon instagram"
+          >
             <Icon
-              icon="pinterest"
-              title="like us on facebook"
-              fill="rgb(68,96,160)"
-              viewBox="0 0 32 32"
+              icon="instagram"
+              title="heart us on instagram"
+              fill="rgb(221, 42, 123)"
+              viewBox="0 0 169 169"
               size={26}
             />
-          </a> */}
-          <a className="footer-icon twitter">
+          </a>
+          <a href="https://www.twitter.com/" className="footer-icon twitter">
             <Icon
               icon="twitter"
               title="follow us on twitter"
@@ -133,7 +137,10 @@ const Footer: React.FC = () => {
               size={26}
             />
           </a>
-          <a className="footer-icon pinterest">
+          <a
+            href="https://www.pinterest.com/"
+            className="footer-icon pinterest"
+          >
             <Icon
               icon="pinterest"
               title="follow us on pinterest"
@@ -144,24 +151,44 @@ const Footer: React.FC = () => {
           </a>
         </div>
         <div className="footer-icons__payment">
-          <img src={paypalImage} className="footer-icon--img paypal" />
-          <img src={aeImage} className="footer-icon--img american-express" />
-          <img src={visaImage} className="footer-icon--img visa" />
-          <img src={mcImage} className="footer-icon--img mastercard" />
+          <img
+            src={paypalImage}
+            alt="paypal"
+            className="footer-icon--img paypal"
+          />
+          <img
+            src={aeImage}
+            alt="american-express"
+            className="footer-icon--img american-express"
+          />
+          <img src={visaImage} alt="visa" className="footer-icon--img visa" />
+          <img
+            src={mcImage}
+            alt="master-card"
+            className="footer-icon--img mastercard"
+          />
         </div>
       </div>
-      <div className="legal">
-        <p className="col copyright txt-primary">&copy;Copyright Anikela {}</p>
+      <div className="footnote">
+        <p className="col footnote-copyright">
+          &copy;Copyright Anikela {new Date().getFullYear()}
+        </p>
 
-        <ul className="col legalities">
-          <li className="links">
-            <a href="">privacy</a>
+        <ul className="col footnote-links">
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              privacy
+            </Link>
           </li>
-          <li className="links">
-            <a href="">cookies policy</a>
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              cookies policy
+            </Link>
           </li>
-          <li className="links">
-            <a href="">accessibility</a>
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              accessibility
+            </Link>
           </li>
         </ul>
       </div>
