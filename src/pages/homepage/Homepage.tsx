@@ -5,6 +5,7 @@ import logo from "../../assets/resources/logo.svg";
 import Image from "../../assets/images/home.png"
 import Banner from "../../assets/images/bannerimg.png"
 import Shop from "../../assets/images/shopBanner.png"
+import Video from "../../assets/video/labels.mp4"
 
 
 const Homepage = () => {
@@ -152,11 +153,10 @@ const Header = () => {
 
   const ShopDisp = () => {
     return (
-        <div className="">
-               <img src={Shop} className="shopBanner" />
-              {/* <button><span>Shop Now</span></button> */}
-
-        </div>
+      <div className="App">
+      <video src={Video}  width="100%" height="230px" muted autoPlay>
+     </video>
+      </div>
     );
   };
   export default Homepage;
