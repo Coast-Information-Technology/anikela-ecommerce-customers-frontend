@@ -156,13 +156,13 @@ const Footer: React.FC = () => {
 
         <ul className="col legalities">
           <li className="links">
-            <a href="">privacy</a>
+            <Link to="">privacy</Link>
           </li>
           <li className="links">
-            <a href="">cookies policy</a>
+            <Link to="">cookies policy</Link>
           </li>
           <li className="links">
-            <a href="">accessibility</a>
+            <Link to="">accessibility</Link>
           </li>
         </ul>
       </div>
