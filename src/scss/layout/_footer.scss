@@ -96,7 +96,7 @@
   }
 }
 
-.legal {
+.footnote {
   width: 100%;
   @extend .d-flex,
     .flex-column-reverse,
@@ -104,28 +104,19 @@
     .flex-sm-column-reverse,
     .pb-3;
 }
-.copyright {
+.footnote-copyright {
   display: block;
   font-size: 14px;
   @extend .align-self-sm-center;
 }
 
-.legalities {
+.footnote-links {
   width: 100%;
   @extend .d-flex, .p-0;
   justify-content: space-between;
 }
 
-.legalities .links {
+.footnote-link {
   font-size: 14px;
-  // @media only screen and (max-width: 768px) {
-  //   & {
-  //     // float: left;
-  //     margin: 0 auto;
-  //   }
-  // }
-}
-
-.legalities .links a {
   color: $primary;
 }

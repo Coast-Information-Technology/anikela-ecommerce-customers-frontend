@@ -166,18 +166,24 @@ const Footer: React.FC = () => {
           />
         </div>
       </div>
-      <div className="legal">
-        <p className="col copyright txt-primary">&copy;Copyright Anikela {}</p>
+      <div className="footnote">
+        <p className="col footnote-copyright">&copy;Copyright Anikela {}</p>
 
-        <ul className="col legalities">
-          <li className="links">
-            <Link to="">privacy</Link>
+        <ul className="col footnote-links">
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              privacy
+            </Link>
           </li>
-          <li className="links">
-            <Link to="">cookies policy</Link>
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              cookies policy
+            </Link>
           </li>
-          <li className="links">
-            <Link to="">accessibility</Link>
+          <li className="footnote-item">
+            <Link to="" className="footnote-link">
+              accessibility
+            </Link>
           </li>
         </ul>
       </div>
