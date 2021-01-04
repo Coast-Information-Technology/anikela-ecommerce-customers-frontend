@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 
-// asset
+// assets
 import paypalImage from "../../assets/images/paypa-mini.png";
 import aeImage from "../../assets/images/american-express-mini.png";
 import visaImage from "../../assets/images/visa-mini.png";
