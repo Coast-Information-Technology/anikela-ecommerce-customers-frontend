@@ -116,15 +116,18 @@ const Footer: React.FC = () => {
               size={26}
             />
           </a>
-          {/* <a className="social-icon instagram">
+          <a
+            href="https://www.instagram.com/"
+            className="footer-icon instagram"
+          >
             <Icon
-              icon="pinterest"
-              title="like us on facebook"
-              fill="rgb(68,96,160)"
-              viewBox="0 0 32 32"
+              icon="instagram"
+              title="heart us on instagram"
+              fill="rgb(221, 42, 123)"
+              viewBox="0 0 169 169"
               size={26}
             />
-          </a> */}
+          </a>
           <a href="https://www.twitter.com/" className="footer-icon twitter">
             <Icon
               icon="twitter"
