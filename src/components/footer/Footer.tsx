@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 
 // asset
@@ -15,27 +16,29 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">Need some Help</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="">Help</a>
+              <Link className="footer-link" to="">
+                Help
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Track order
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Delivery & Returns policies
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Customer Service
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -43,24 +46,24 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">About Anikela</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 About us
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Careers at Anikela
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Investors
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Terms and Conditions
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -68,24 +71,24 @@ const Footer: React.FC = () => {
           <h4 className="footer-group-header">More to know</h4>
           <ul className="footer-group-links">
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Gift Vouchers
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Anikela brands
-              </a>
+              </Link>
             </li>
             <li className="footer-item">
-              <a href="" className="footer-link">
+              <Link to="" className="footer-link">
                 Coupons
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
