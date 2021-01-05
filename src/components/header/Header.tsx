@@ -8,7 +8,6 @@ const Header = () => {
   return (
     <header className="header">
       <MiniNav />
-      <MainNav />
     </header>
   );
 };
@@ -22,10 +21,6 @@ const MiniNav: React.FC = () => {
       <span className="text-primary ">Care-line +09074348485</span>
     </nav>
   );
-};
-
-const MainNav = () => {
-  return <nav></nav>;
 };
 
 export default Header;
