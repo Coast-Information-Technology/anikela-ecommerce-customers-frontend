@@ -13,7 +13,7 @@
   width: 100%;
   height: auto;
   font-size: 12px;
-  @extend .d-flex, .justify-content-between, .bg-dark, .px-5, .py-1;
+  @extend .d-flex, .justify-content-between, .bg-dark, .px-4, .py-1;
 }
 .mini-nav__location {
   @extend .d-flex, .align-items-center, .p-0;
@@ -22,26 +22,22 @@
 .location-dropdown__text {
   @extend .text-primary, .me-2;
 }
-.location-dropdown__toggle {
-  color: $accent;
-  cursor: pointer;
-}
-.location-dropdown__icon {
-  @extend .ms-1;
-}
-.location-dropdown__dropdown-menu {
-  @extend .rounded-1, .shadow-lg, .border-0;
-}
 // main navigation styles
 .main-nav {
   width: 100%;
-  height: 50px;
-  @extend .navbar, .navbar-expand-lg, .navbar-light, .bg-light, .px-5, .py-4;
+  height: auto;
+  @extend .navbar,
+    .align-items-center,
+    .navbar-expand-lg,
+    .mb-lg-0,
+    .navbar-light,
+    .bg-light,
+    .px-4;
 }
 
 .main-nav__link-group {
-  flex: 2 0 auto;
-  @extend .navbar-nav, .me-3;
+  flex: 2;
+  @extend .navbar-nav, .align-items-center, .d-none, .d-lg-flex;
 }
 
 .main-nav__link {
@@ -77,16 +73,15 @@
 
 // Search bar styles
 .main-nav__search {
-  flex: 6 2 auto;
-  @extend .nav-item, .position-relative;
+  flex: 5;
+  @extend .nav-item, .position-relative, .mx-4;
 
   .search-box {
     width: 100%;
-    font-size: 14px;
     font-weight: 500;
     border: 2px solid rgba($color: #000000, $alpha: 0.1);
     outline: none;
-    @extend .form-control, .rounded-pill, .py-2;
+    @extend .form-control, .rounded-pill, .pe-5, .fs-6, .d-md-block, .d-none;
   }
 
   .search-btn {
@@ -96,7 +91,7 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    @extend .rounded-circle, .position-absolute;
+    @extend .rounded-circle, .position-absolute, .p-0;
     background-color: transparent;
     .icon {
       position: absolute;
@@ -104,14 +99,21 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+    @media (max-width: 768px) {
+      padding: 0;
+    }
   }
 }
 
 .main-nav__utilities {
   height: inherit;
-  flex: 5;
-  padding-left: 45px;
-  @extend .nav-item, .d-flex, .justify-content-between, .align-items-center;
+  flex: 3;
+  @extend .nav-item,
+    .d-flex,
+    .justify-content-between,
+    .align-items-center,
+    .d-none,
+    .d-md-flex;
 }
 
 .notification {
@@ -132,10 +134,10 @@
     .rounded-circle;
 }
 .nav-util {
-  @extend .nav-item, .position-relative;
+  @extend .position-relative;
 }
 .nav-util__txt {
-  @extend .me-2, .fs-6;
+  @extend .me-2, .fs-6, .d-md-block, .d-sm-none;
 }
 .nav-util__img:hover {
   color: $primary;
