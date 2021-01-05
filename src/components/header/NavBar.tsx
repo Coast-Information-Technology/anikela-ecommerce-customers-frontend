@@ -4,55 +4,53 @@ import logo from "../../assets/resources/logo.svg";
 import Icon from "../common/icon/Icon";
 
 const NavBar: React.FC = () => {
+  const noOfItemsInCart: number = 12;
   return (
-    <nav className="main-nav">
+    <nav className="navbar">
       <div className="container">
         <Link to="/" className="navbar-brand">
           <img src={logo} alt="Anikela logo" className="logo" />
         </Link>
-        <div className="main-nav__link-group">
-          <Link to="products/women" className="main-nav__link">
+
+        <div className="navbar-nav">
+          <Link to="products/women" className="nav-link">
             women
           </Link>
-          <Link to="products/men" className="main-nav__link">
+          <Link to="products/men" className="nav-link">
             men
           </Link>
         </div>
-        <div className="main-nav__utilities">
+
+        <div className="nav-util">
           <Link to="dashboard">
-            <div className="nav-util d-flex ">
-              <span className="nav-util__txt">Sign In</span>
-              <span className="nav-util__img">
-                <Icon
-                  icon="user"
-                  title="your account"
-                  className="nav-util__img"
-                  size={24}
-                />
-              </span>
-            </div>
+            <Icon icon="user" title="your account" className="" size={24} />
           </Link>
+        </div>
+
+        <div className="nav-util">
           <Link to="wishlist" className="">
-            <div className="nav-util">
-              <Icon
-                icon="wishlist"
-                title="Your wishlist"
-                className="nav-util__img"
-                size={24}
-              />
-            </div>
+            <Icon
+              icon="wishlist"
+              title="Your wishlist"
+              className="nav-util__img"
+              size={24}
+            />
           </Link>
+        </div>
+
+        <div className="nav-util position-relative btn">
           <Link to="shopping-cart">
-            <div className="nav-util">
-              <div className="notification">3</div>
-              <Icon
-                icon="shopping-bag"
-                title="your shopping cart"
-                className="nav-util__img"
-                size={24}
-              />
-            </div>
+            <Icon
+              icon="shopping-bag"
+              title="your shopping cart"
+              className="nav-util__img"
+              size={24}
+            />
           </Link>
+          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill text-primary bg-secondary">
+            {noOfItemsInCart.toString()}
+            <span className="visually-hidden">items in cart</span>
+          </span>
         </div>
       </div>
     </nav>
