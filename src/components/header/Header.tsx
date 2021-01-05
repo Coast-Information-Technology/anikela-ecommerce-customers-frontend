@@ -1,9 +1,11 @@
-import React, { SyntheticEvent, useState } from "react";
+import React from "react";
+import NavBar from "./NavBar";
 
 const Header = () => {
   return (
     <header className="header">
       <MiniNav />
+      <NavBar />
     </header>
   );
 };
