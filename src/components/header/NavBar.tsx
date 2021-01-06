@@ -1,12 +1,14 @@
 import React from "react";
-import MediaQuery from "react-responsive";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import logo from "../../assets/resources/logo.svg";
 import Icon from "../common/icon/Icon";
 import SideNavToggle from "../common/mobile_nav/SideNavToggle";
-import SearchBar from "../common/search_bar/SearchBar";
+import SearchBar, { SearchBarUtil } from "../common/search_bar/SearchBar";
 
 const NavBar: React.FC = () => {
+  const isTabletScreen = useMediaQuery({ query: "(max-width: 767px)" });
+  const innerSpaceClass = isTabletScreen ? "flex-grow-1" : "";
   const noOfItemsInCart: number = 0;
   return (
     <nav className="navbar">
@@ -14,7 +16,7 @@ const NavBar: React.FC = () => {
         <MediaQuery maxDeviceWidth={1023}>
           <SideNavToggle />
         </MediaQuery>
-        <Link to="/" className="">
+        <Link to="/" className={innerSpaceClass}>
           <img src={logo} alt="Anikela logo" className="logo" />
         </Link>
         <MediaQuery minDeviceWidth={1024}>
@@ -27,8 +29,8 @@ const NavBar: React.FC = () => {
             </Link>
           </div>
         </MediaQuery>
+        {isTabletScreen ? <SearchBarUtil /> : <SearchBar />}
 
-        <SearchBar />
         <MediaQuery minDeviceWidth={576}>
           <div className="nav-util">
             <Link to="dashboard">
