@@ -60,4 +60,16 @@ export const SearchBtn: React.FC = () => {
   );
 };
 
+// Launches the search bar component as a modal
+export const SearchBarUtil: React.FC = () => {
+  const handleClick = () => {
+    alert("search bar launched...not yet");
+  };
+  return (
+    <div className="nav-util" onClick={handleClick}>
+      <Icon icon="search" title="Search " className="nav-util__img" size={24} />
+    </div>
+  );
+};
+
 export default SearchBar;
