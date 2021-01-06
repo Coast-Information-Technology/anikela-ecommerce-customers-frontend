@@ -41,12 +41,23 @@ class SearchBar extends Component {
           value={this.state.query}
           onChange={this.handleInputChange}
         />
-        <button type="submit" className="searchbar-form__btn">
-          <Icon icon="search" title="Search" className="me-4" size={18} />
-        </button>
+        <SearchBtn />
       </form>
     );
   }
 }
+
+export const SearchBtn: React.FC = () => {
+  return (
+    <button type="submit" className="searchbar-form__btn">
+      <Icon
+        icon="search"
+        title="Search"
+        className="searchbar-form__icon"
+        size={18}
+      />
+    </button>
+  );
+};
 
 export default SearchBar;
