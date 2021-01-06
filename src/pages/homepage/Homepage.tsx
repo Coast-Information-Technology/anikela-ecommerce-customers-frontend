@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Icon from "../../components/common/icon/Icon";
-import logo from "../../assets/resources/logo.svg";
+// import { Link } from "react-router-dom";
+// import Icon from "../../components/common/icon/Icon";
+// import logo from "../../assets/resources/logo.svg";
 import Image from "../../assets/images/home.png"
 import Banner from "../../assets/images/bannerimg.png"
-import Shop from "../../assets/images/shopBanner.png"
+import Video from "../../assets/video/video.mp4"
 
 
 const Homepage = () => {
@@ -128,7 +128,7 @@ const Homepage = () => {
   const HomeSecImage = () => {
     return (
         <div>
-                <img src={Image} className="homeImage" />
+                <img src={Image} alt="img" className="homeImage" />
         </div>
     );
   };
@@ -145,18 +145,28 @@ const Homepage = () => {
   const BannerSection = () => {
     return (
         <div className="">
-               <img src={Banner} className="imgBanner" />
+               <img src={Banner} alt="img" className="imgBanner" />
         </div>
     );
   };
 
   const ShopDisp = () => {
     return (
-        <div className="">
-               <img src={Shop} className="shopBanner" />
-              {/* <button><span>Shop Now</span></button> */}
+      <div className="boxwrapper">
 
-        </div>
+      <div className="videobox">
+            <video src={Video} muted loop autoPlay>
+           </video>
+           </div>
+           <div className="videobox overlaybox">
+             <div className="container video-content d-flex justify-content-between px-5 py-3">
+           <span className="">
+                <span className="txt_quickhass text-white">Quick and hassle-free <br />shopping</span>
+              </span>
+              <button className="btn-shopnow">SHOP NOW</button>
+           </div>
+           </div>
+           </div>
     );
   };
   export default Homepage;
