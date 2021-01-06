@@ -1,7 +1,30 @@
-.homeImage{
+.imagewrapper{
+    position: relative;
     width: 100%;
-    height: 95vh;
+    height: 708px;
+    background: #222;
 }
+.imagewrapper .clip{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+}
+.imagewrapper .clip.clip1{
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+  background-position:  -10px -100px;
+  background-size: 65%;
+    clip-path: polygon(0 0, 39% 0, 63% 100%, 0% 100%);
+ }
+ .imagewrapper .clip.clip.clip2{
+    background: url(../../assets/images/imgmen.jpg);
+    background-repeat: no-repeat;
+    background-position:  500px -0px;
+    background-size: 65%;
+    clip-path: polygon(100% 0, 39% 0, 63% 100%, 100% 100%);
+ }
 .sectionBtn{
     margin-top: -30px;
     margin-bottom: 50px ;
@@ -18,6 +41,7 @@ button{
     border: none;
     margin-top: -200px;
     margin-bottom: 100px;
+    z-index: 99;
 }
 .shop_womenbtn{
     background-color: #01010C;
