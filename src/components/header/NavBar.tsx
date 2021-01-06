@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/resources/logo.svg";
 import Icon from "../common/icon/Icon";
 import SideNavToggle from "../common/mobile_nav/SideNavToggle";
+import SearchBar from "../common/search_bar/SearchBar";
 
 const NavBar: React.FC = () => {
   const noOfItemsInCart: number = 12;
@@ -26,7 +27,7 @@ const NavBar: React.FC = () => {
             </Link>
           </div>
         </MediaQuery>
-
+        <SearchBar />
         <MediaQuery minDeviceWidth={576}>
           <div className="nav-util">
             <Link to="dashboard">
