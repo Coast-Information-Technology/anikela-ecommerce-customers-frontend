@@ -1,29 +1,31 @@
 .searchbar-form {
-  flex: 5;
-  @extend .nav-item, .position-relative;
+  flex-grow: 3;
+  align-self: center;
+  @extend .position-relative, .mx-3;
 
   &__input {
     width: 100%;
-    font-weight: 500;
-    border: 2px solid rgba($color: #000000, $alpha: 0.1);
+    font-size: 1rem;
+    display: block;
     outline: none;
-    @extend .form-control, .rounded-pill, .pe-5, .fs-6;
+    border: 2px solid rgba($color: #000000, $alpha: 0.1);
+    @extend .form-control, .position-relative, .rounded-pill, .pe-4;
   }
 
   &__btn {
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     border: 1px solid transparent;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    @extend .rounded-circle, .position-absolute, .p-0;
+    @extend .rounded-circle,
+      .position-absolute,
+      .top-50,
+      .end-0,
+      .translate-middle-y,
+      .p-0,
+      .me-1;
     background-color: transparent;
-    .icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  }
+  &__icon {
+    @extend .position-absolute, .top-50, .start-50, .translate-middle;
   }
 }
