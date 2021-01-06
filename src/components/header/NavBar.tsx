@@ -1,75 +1,72 @@
 import React from "react";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import logo from "../../assets/resources/logo.svg";
 import Icon from "../common/icon/Icon";
+import SideNavToggle from "../common/mobile_nav/SideNavToggle";
+import SearchBar, { SearchBarUtil } from "../common/search_bar/SearchBar";
 
 const NavBar: React.FC = () => {
-  const openSideNav = () => {
-    alert("yeehaw!!");
-  };
-  const noOfItemsInCart: number = 12;
+  const isTabletScreen = useMediaQuery({ query: "(max-width: 767px)" });
+  const innerSpaceClass = isTabletScreen ? "flex-grow-1" : "";
+  const noOfItemsInCart: number = 0;
   return (
     <nav className="navbar">
-      <div className="container">
-        <div
-          className="btn navbar-toggler flex-shrink-1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={openSideNav}
-        >
-          <svg viewBox="-5 0 10 8" width="20" className="navbar-toggler-icon">
-            <line
-              y2="8"
-              stroke="rgb(1, 2, 12)"
-              stroke-width="20"
-              stroke-dasharray="1 2"
-            />
-          </svg>
-        </div>
-
-        <Link to="/" className="navbar-brand">
+      <div className="container-lg">
+        <MediaQuery maxDeviceWidth={1023}>
+          <SideNavToggle />
+        </MediaQuery>
+        <Link to="/" className={innerSpaceClass}>
           <img src={logo} alt="Anikela logo" className="logo" />
         </Link>
+        <MediaQuery minDeviceWidth={1024}>
+          <div className="navbar-nav">
+            <Link to="products/women" className="navbar__link">
+              women
+            </Link>
+            <Link to="products/men" className="navbar__link">
+              men
+            </Link>
+          </div>
+        </MediaQuery>
+        {isTabletScreen ? <SearchBarUtil /> : <SearchBar />}
 
-        <div className="navbar-nav">
-          <Link to="products/women" className="nav-link">
-            women
-          </Link>
-          <Link to="products/men" className="nav-link">
-            men
-          </Link>
-        </div>
+        <MediaQuery minDeviceWidth={576}>
+          <div className="nav-util">
+            <Link to="dashboard">
+              <Icon icon="user" title="your account" className="" size={24} />
+            </Link>
+          </div>
 
-        <div className="nav-util flex-shrink-1">
-          <Link to="dashboard">
-            <Icon icon="user" title="your account" className="" size={24} />
-          </Link>
-        </div>
+          <div className="nav-util">
+            <Link to="wishlist" className="">
+              <Icon
+                icon="wishlist"
+                title="Your wishlist"
+                className="nav-util__img"
+                size={24}
+              />
+            </Link>
+          </div>
+        </MediaQuery>
 
-        <div className="nav-util flex-shrink-1">
-          <Link to="wishlist" className="">
-            <Icon
-              icon="wishlist"
-              title="Your wishlist"
-              className="nav-util__img"
-              size={24}
-            />
-          </Link>
-        </div>
-
-        <div className="nav-util position-relative btn flex-shrink-1">
-          <Link to="shopping-cart">
+        <div className="nav-util position-relative">
+          <Link to="shopping-cart" className="position-relative">
             <Icon
               icon="shopping-bag"
               title="your shopping cart"
               className="nav-util__img"
               size={24}
             />
+            {noOfItemsInCart !== 0 ? (
+              <span className="cart-notification-badge">
+                {noOfItemsInCart.toString()}
+                <span className="visually-hidden">items in cart</span>
+              </span>
+            ) : (
+              <span className="visually-hidden">you have no items in cart</span>
+            )}
           </Link>
-          <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill text-primary bg-secondary">
-            {noOfItemsInCart.toString()}
-            <span className="visually-hidden">items in cart</span>
-          </span>
         </div>
       </div>
     </nav>

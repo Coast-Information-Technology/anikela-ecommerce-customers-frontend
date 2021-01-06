@@ -2,23 +2,21 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
 // import logo from "../../assets/resources/logo.svg";
-import Image from "../../assets/images/home.png"
-import Banner from "../../assets/images/bannerimg.png"
-import Video from "../../assets/video/video.mp4"
-
+import Image from "../../assets/images/home.png";
+import Banner from "../../assets/images/bannerimg.png";
+import Video from "../../assets/video/video.mp4";
 
 const Homepage = () => {
-    return(
-        <body>
-        {/* <Header/> */}
-        <HomeSecImage/>
-         <PickSecBtn />
-         <BannerSection/>
-         <ShopDisp/>
-        </body>
-
-    );
-}
+  return (
+    <>
+      {/* <Header/> */}
+      <HomeSecImage />
+      <PickSecBtn />
+      <BannerSection />
+      <ShopDisp />
+    </>
+  );
+};
 
 // const Header = () => {
 //     return (
@@ -28,7 +26,7 @@ const Homepage = () => {
 //       </header>
 //     );
 //   };
-  
+
 //   const MiniNav = () => {
 //     return (
 //       <nav className="mini-nav">
@@ -40,7 +38,7 @@ const Homepage = () => {
 //       </nav>
 //     );
 //   };
-  
+
 //   const MainNav = () => {
 //     return (
 //       <nav className="main-nav">
@@ -124,8 +122,8 @@ const Homepage = () => {
 //       </nav>
 //     );
 //   };
-  
-  const HomeSecImage = () => {
+
+const HomeSecImage = () => {
     return (
       <div className="imagewrapper">
       <div className="clip clip1"></div>
@@ -134,42 +132,45 @@ const Homepage = () => {
     );
   };
 
-  const PickSecBtn = () => {
-    return (
-        <div className="sectionBtn d-flex justify-content-between  px-5 py-1">
-            <button className="shop_womenbtn"><span>SHOP WOMEN</span></button>
-            <button className="shop_menbtn"><span>SHOP MEN</span></button>
-        </div>
-    );
-  };
-
-  const BannerSection = () => {
-    return (
-        <div className="">
-               <img src={Banner} alt="img" className="imgBanner" />
-        </div>
-    );
-  };
-
-  const ShopDisp = () => {
-    return (
-      <div className="boxwrapper">
-
-      <div className="videobox">
-            <video src={Video} muted loop autoPlay>
-           </video>
-           </div>
-           <div className="videobox overlaybox">
-             <div className="container video-content d-flex justify-content-between px-5 py-3">
-           <span className="">
-                <span className="txt_quickhass text-white">Quick and hassle-free <br />shopping</span>
-              </span>
-              <button className="btn-shopnow">SHOP NOW</button>
-           </div>
-           </div>
-           </div>
+const PickSecBtn = () => {
+  return (
+    <div className="sectionBtn d-flex justify-content-between  px-5 py-1">
+      <button className="shop_womenbtn">
+        <span>SHOP WOMEN</span>
+      </button>
+      <button className="shop_menbtn">
+        <span>SHOP MEN</span>
+      </button>
+    </div>
   );
-  };
-  export default Homepage;
-  
-  
+};
+
+const BannerSection = () => {
+  return (
+    <div className="">
+      <img src={Banner} alt="img" className="imgBanner" />
+    </div>
+  );
+};
+
+const ShopDisp = () => {
+  return (
+    <div className="boxwrapper">
+      <div className="videobox">
+        <video src={Video} muted loop autoPlay></video>
+      </div>
+      <div className="videobox overlaybox">
+        <div className="container video-content d-flex justify-content-between px-5 py-3">
+          <span className="">
+            <span className="txt_quickhass text-white">
+              Quick and hassle-free <br />
+              shopping
+            </span>
+          </span>
+          <button className="btn-shopnow">SHOP NOW</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Homepage;

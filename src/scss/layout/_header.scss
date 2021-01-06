@@ -5,7 +5,8 @@
 
 /* logo */
 .logo {
-  width: 140px;
+  width: 120px;
+  @extend .px-2;
 }
 
 // mini navigation styles
@@ -13,4 +14,57 @@
   width: 100%;
   height: auto;
   font-size: 0.75rem;
+}
+
+.navbar {
+  @extend .pt-2, .p-0, .m-0, .flex-nowrap;
+}
+
+.navbar-nav {
+  flex: 2;
+  height: 50px;
+  align-items: center;
+  @extend .flex-row, .align-items-center, .justify-content-evenly;
+}
+.navbar__link {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  @extend .nav-link;
+}
+.navbar__link::after {
+  content: "";
+  width: 0%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: $gradient-no-angle;
+  transition: width 500ms ease;
+}
+.navbar__link:hover {
+  text-decoration: none;
+}
+
+.navbar__link:hover::after,
+.navbar__link:focus::after,
+.navbar__link:active::after {
+  width: 100%;
+}
+.nav-util {
+  padding: 12px 15px;
+}
+
+.cart-notification-badge {
+  @extend .position-absolute,
+    .top-0,
+    .start-100,
+    .translate-middle,
+    .badge,
+    .rounded-pill,
+    .text-primary,
+    .bg-secondary;
 }
