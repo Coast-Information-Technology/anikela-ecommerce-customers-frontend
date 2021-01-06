@@ -9,18 +9,10 @@
 }
 
 // mini navigation styles
-.mini-nav {
+.mini-navbar {
   width: 100%;
   height: auto;
-  font-size: 12px;
-  @extend .d-flex, .justify-content-between, .bg-dark, .px-4, .py-1;
-}
-.mini-nav__location {
-  @extend .d-flex, .align-items-center, .p-0;
-}
-
-.location-dropdown__text {
-  @extend .text-primary, .me-2;
+  font-size: 0.75rem;
 }
 
 // // main navigation styles
