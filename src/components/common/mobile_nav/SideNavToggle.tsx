@@ -7,7 +7,7 @@ const SideNavToggle: React.FC = () => {
 
   return (
     <div
-      className="btn px-0 pe-3 side-nav__toggle"
+      className="btn ps-0 pe-3 side-nav__toggle"
       aria-expanded="false"
       aria-label="Toggle navigation"
       onClick={openSideNav}
