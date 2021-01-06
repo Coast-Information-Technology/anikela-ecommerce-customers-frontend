@@ -2,7 +2,7 @@ import React, { SyntheticEvent, useState } from "react";
 import { Link } from "react-router-dom";
 import Icon from "../common/icon/Icon";
 import logo from "../../assets/resources/logo.svg";
-import { log } from "console";
+// import { log } from "console";
 
 const Header = () => {
   return (
