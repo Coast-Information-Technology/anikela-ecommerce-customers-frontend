@@ -7,7 +7,7 @@ import SideNavToggle from "../common/mobile_nav/SideNavToggle";
 import SearchBar from "../common/search_bar/SearchBar";
 
 const NavBar: React.FC = () => {
-  const noOfItemsInCart: number = 12;
+  const noOfItemsInCart: number = 0;
   return (
     <nav className="navbar">
       <div className="container-lg">
@@ -18,15 +18,16 @@ const NavBar: React.FC = () => {
           <img src={logo} alt="Anikela logo" className="logo" />
         </Link>
         <MediaQuery minDeviceWidth={1024}>
-          <div className="navbar-nav flex-row flex-grow-1 justify-content-evenly">
-            <Link to="products/women" className="nav-link">
+          <div className="navbar-nav">
+            <Link to="products/women" className="navbar__link">
               women
             </Link>
-            <Link to="products/men" className="nav-link">
+            <Link to="products/men" className="navbar__link">
               men
             </Link>
           </div>
         </MediaQuery>
+
         <SearchBar />
         <MediaQuery minDeviceWidth={576}>
           <div className="nav-util">
@@ -48,18 +49,22 @@ const NavBar: React.FC = () => {
         </MediaQuery>
 
         <div className="nav-util position-relative">
-          <Link to="shopping-cart">
+          <Link to="shopping-cart" className="position-relative">
             <Icon
               icon="shopping-bag"
               title="your shopping cart"
               className="nav-util__img"
               size={24}
             />
+            {noOfItemsInCart !== 0 ? (
+              <span className="cart-notification-badge">
+                {noOfItemsInCart.toString()}
+                <span className="visually-hidden">items in cart</span>
+              </span>
+            ) : (
+              <span className="visually-hidden">you have no items in cart</span>
+            )}
           </Link>
-          <span className="position-absolute btn top-0 start-100 translate-middle badge rounded-pill text-primary bg-secondary">
-            {noOfItemsInCart.toString()}
-            <span className="visually-hidden">items in cart</span>
-          </span>
         </div>
       </div>
     </nav>
