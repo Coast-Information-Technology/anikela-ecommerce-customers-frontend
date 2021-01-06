@@ -127,9 +127,10 @@ const Homepage = () => {
   
   const HomeSecImage = () => {
     return (
-        <div>
-                <img src={Image} alt="img" className="homeImage" />
-        </div>
+      <div className="imagewrapper">
+      <div className="clip clip1"></div>
+      <div className="clip clip2"></div>
+  </div>
     );
   };
 
