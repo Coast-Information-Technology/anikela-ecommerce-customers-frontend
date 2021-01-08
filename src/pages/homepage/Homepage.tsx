@@ -6,14 +6,14 @@ import Video from "../../assets/video/showcase_video.mp4";
 
 const Homepage = () => {
   return (
-    <body>
+    <div>
       {/* <Header/> */}
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
       <BannerSection />
       <ShopDisp />
-    </body>
+    </div>
   );
 };
 
