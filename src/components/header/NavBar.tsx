@@ -29,7 +29,13 @@ const NavBar: React.FC = () => {
             </Link>
           </div>
         </MediaQuery>
-        {isTabletScreen ? <SearchBarUtil /> : <SearchBar />}
+        {isTabletScreen ? (
+          <MediaQuery maxDeviceWidth={375}>
+            <SearchBarUtil />
+          </MediaQuery>
+        ) : (
+          <SearchBar />
+        )}
 
         <MediaQuery minDeviceWidth={576}>
           <div className="nav-util">
