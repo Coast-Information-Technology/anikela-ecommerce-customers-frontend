@@ -1,128 +1,232 @@
-.imagewrapper{
-    position: relative;
-    width: 100%;
-    height: 708px;
-    background: #222;
+.imagewrapper {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
 }
-.imagewrapper .clip{
-   position: absolute;
-   top: 0;
-   left: 0;
-   height: 100%;
-   width: 100%;
+.clip-image-left {
+  background: url(../../assets/images/img1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  flex: 50%;
+      clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
 }
-.imagewrapper .clip.clip1{
-    background: url(../../assets/images/img1.png);
-    background-repeat: no-repeat;
-  background-position:  -10px -100px;
-  background-size: 65%;
-    clip-path: polygon(0 0, 39% 0, 63% 100%, 0% 100%);
- }
- .imagewrapper .clip.clip.clip2{
+
+.clip-image-right {
+  background: url(../../assets/images/imgmen.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 10px;
+  flex: 50%;
+  clip-path: polygon(100% 0, 0 0, 5% 100%, 100% 100%);
+}
+
+.slogan-container {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 7px;
+  margin-top: -350px;
+  z-index: 1000;
+}
+.slogan-wrapper {
+  width: 25%;
+  background-color: white;
+  margin: 0 auto;
+  z-index: 1000;
+  padding: 5px;
+}
+.slogan-title {
+  color: #01010c;
+  font-size: 34px;
+}
+.slogan-description {
+  color: #646464;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.text-color {
+  color: #f39fae;
+}
+.btn-selectcat {
+  // width: 100%;
+  position: relative;
+  margin-top: 230px;
+  margin-bottom: 100px;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.btn-selectcat button {
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.btn-man {
+  background: #fbfbfb;
+  margin-left: 40%;
+  flex: -50%;
+}
+.btn-woman {
+  background-color: #01010c;
+  color: #f39fae;
+  margin-left: 20%;
+  flex: -50%;
+}
+
+.imgBanner{
+  width: 100%;
+  height: 90px;
+}
+.boxwrapper {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.videobox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.videobox video {
+  width: 100%;
+  height: auto;
+}
+.overlaybox {
+  width: 100%;
+  height: auto;
+  z-index: 999;
+}
+.txt_quickhass {
+  font-size: 24px;
+}
+
+.btn-shopnow {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: #01010c;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 60%;
+}
+.video-content {
+  padding-top: 150px !important;
+  height: 300px;
+}
+
+// reduce scaling for both images on 768px
+@media (max-width: 768px) {
+  .clip-image-right {
     background: url(../../assets/images/imgmen.jpg);
     background-repeat: no-repeat;
-    background-position:  500px -0px;
-    background-size: 65%;
-    clip-path: polygon(100% 0, 39% 0, 63% 100%, 100% 100%);
- }
-.sectionBtn{
-    margin-top: -30px;
-    margin-bottom: 50px ;
-}
-// .sectionBtn button{
-
-// }
-
-
-button{
-    padding: 20px;
-    width: 200px;
-    height: 50px;
-    border: none;
-    margin-top: -200px;
-    margin-bottom: 100px;
-    z-index: 99;
-}
-.shop_womenbtn{
-    background-color: #01010C;
-    box-shadow:10px black;
-    margin-left: 100px;
-    padding-bottom:40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-.shop_menbtn{
-    background-color: #ffffff;
-    box-shadow:5px black;
-    margin-right: 100px;
-        padding-bottom:40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-.shop_womenbtn span{
-    color: #F39FAE;
-    font-weight: bolder;
-    text-align: center;
-}
-.shop_menbtn span{
-    color: #1C2140;
-    font-weight: bolder;
-    text-align: center;
-}
-.imgBanner{
-    margin-top: 5px;
-    width: 100%;
-    height: 103px;
-}
-// .shopBanner{
-//     margin-bottom: 50px;
-// }
-.boxwrapper{
-    width: 100%;
-    height: 300px;
-    margin-bottom: 60px;
+    background-position: -10px -50px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+  }
+  .clip-image-left {
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+    background-position: -10px -50px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+  }
+  .slogan-container {
     position: relative;
-}
-.videobox{
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    margin-top: -350px;
+    z-index: 1000;
+  }
+  .slogan-wrapper {
+    width: 29%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 2px;
+    display: none;
+  }
+  .slogan-title {
+    font-size: 20px;
+  }
+  .slogan-description {
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+  .btn-selectcat {
+    // width: 100%;
+    position: relative;
+    z-index: 999;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .btn-man {
+    width: 100px;
+    height: 40px;
+    margin-left: -35%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -70%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+  .videobox {
     width: 100%;
     height: 100%;
     position: absolute;
-        top: 0;
-        left: 0;
-}
-.videobox video{
+    top: 0;
+    left: 0;
+  }
+  .videobox video {
     width: 100%;
     height: auto;
-}
-.overlaybox{
+  }
+  .overlaybox {
+    position: absolute;
     width: 100%;
-    margin-top: 150px;
     z-index: 999;
-    // margin-right: 20px;
-    // margin-left: 20px;
-}
-.txt_quickhass{
-    font-size: 24px;
-}
+  }
+  .txt_quickhass {
+    font-size: 12px;
+  }
 
-
-.btn-shopnow{
-    width: 150px;
+  .btn-shopnow {
+    width: 90px;
     height: 40px;
     border: none;
-    color: #01010C;
-    padding-bottom:40px;
+    color: #01010c;
+    padding-top: 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 10px;
     font-weight: bold;
     border-radius: 60%;
+  }
+  .video-content {
+    padding-top: 30px !important;
+  }
 }
-
-
-
-
-

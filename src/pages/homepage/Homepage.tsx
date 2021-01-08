@@ -1,24 +1,21 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
-// import logo from "../../assets/resources/logo.svg";
-import Image from "../../assets/images/home.png"
-import Banner from "../../assets/images/bannerimg.png"
-import Video from "../../assets/video/video.mp4"
-
+import Banner from "../../assets/images/bannerimg.png";
+import Video from "../../assets/video/showcase_video.mp4";
 
 const Homepage = () => {
-    return(
-        <body>
-        {/* <Header/> */}
-        <HomeSecImage/>
-         <PickSecBtn />
-         <BannerSection/>
-         <ShopDisp/>
-        </body>
-
-    );
-}
+  return (
+    <body>
+      {/* <Header/> */}
+      <HomeSecImage />
+      <HomeSlogan />
+      <PickSecBtn />
+      <BannerSection />
+      <ShopDisp />
+    </body>
+  );
+};
 
 // const Header = () => {
 //     return (
@@ -28,7 +25,7 @@ const Homepage = () => {
 //       </header>
 //     );
 //   };
-  
+
 //   const MiniNav = () => {
 //     return (
 //       <nav className="mini-nav">
@@ -40,7 +37,7 @@ const Homepage = () => {
 //       </nav>
 //     );
 //   };
-  
+
 //   const MainNav = () => {
 //     return (
 //       <nav className="main-nav">
@@ -124,52 +121,67 @@ const Homepage = () => {
 //       </nav>
 //     );
 //   };
-  
-  const HomeSecImage = () => {
-    return (
-      <div className="imagewrapper">
-      <div className="clip clip1"></div>
-      <div className="clip clip2"></div>
-  </div>
-    );
-  };
 
-  const PickSecBtn = () => {
-    return (
-        <div className="sectionBtn d-flex justify-content-between  px-5 py-1">
-            <button className="shop_womenbtn"><span>SHOP WOMEN</span></button>
-            <button className="shop_menbtn"><span>SHOP MEN</span></button>
-        </div>
-    );
-  };
-
-  const BannerSection = () => {
-    return (
-        <div className="">
-               <img src={Banner} alt="img" className="imgBanner" />
-        </div>
-    );
-  };
-
-  const ShopDisp = () => {
-    return (
-      <div className="boxwrapper">
-
-      <div className="videobox">
-            <video src={Video} muted loop autoPlay>
-           </video>
-           </div>
-           <div className="videobox overlaybox">
-             <div className="container video-content d-flex justify-content-between px-5 py-3">
-           <span className="">
-                <span className="txt_quickhass text-white">Quick and hassle-free <br />shopping</span>
-              </span>
-              <button className="btn-shopnow">SHOP NOW</button>
-           </div>
-           </div>
-           </div>
+const HomeSecImage = () => {
+  return (
+    <div className="imagewrapper">
+      <div className="clip clip-image-left"></div>
+      <div className="clip clip-image-right"></div>
+    </div>
   );
-  };
-  export default Homepage;
-  
-  
+};
+
+const HomeSlogan = () => {
+  return (
+    <div className="slogan-container">
+      <div className="slogan-wrapper">
+        <span className="slogan-title">
+          A<span className="text-color">N</span>IKELA
+        </span>
+        <br />
+        <span className="slogan-description">
+          unique style for fashion lovers
+        </span>
+      </div>
+    </div>
+  );
+};
+
+const PickSecBtn = () => {
+  return (
+    <div className="btn-selectcat">
+      <button className="btn-woman">SHOP WOMEN</button>
+      <button className="btn-man">SHOP MEN</button>
+    </div>
+  );
+};
+
+const BannerSection = () => {
+  return (
+    <div className="">
+      <img src={Banner} alt="banner" className="imgBanner"/>
+    </div>
+  );
+};
+
+const ShopDisp = () => {
+  return (
+    <div className="boxwrapper">
+      <div className="videobox">
+        <video src={Video} muted loop autoPlay></video>
+      </div>
+      <div className="videobox overlaybox">
+        <div className="container video-content d-flex justify-content-between px-5">
+          <div className="overlay-content-container">
+            <span className="txt_quickhass text-white">
+              Quick and hassle-free <br />
+              shopping
+            </span>
+          </div>
+          <button className="btn-shopnow">SHOP NOW</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Homepage;
