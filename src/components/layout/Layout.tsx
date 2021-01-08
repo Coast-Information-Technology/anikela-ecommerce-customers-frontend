@@ -11,10 +11,10 @@ class Layout extends Component {
     return (
       <>
         <BrowserRouter>
+          <Header />
           <MediaQuery maxDeviceWidth={1024}>
             <SideNav />
           </MediaQuery>
-          <Header />
           <MediaQuery maxDeviceWidth={375}>
             <BottomNav />
           </MediaQuery>
