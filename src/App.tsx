@@ -10,10 +10,10 @@ import Homepage from "./pages/homepage/Homepage";
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <MediaQuery maxDeviceWidth={1024}>
         <SideNav />
       </MediaQuery>
-      <Header />
       <Homepage />
       <MediaQuery maxDeviceWidth={375}>
         <BottomNav />
