@@ -7,20 +7,24 @@ import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
 class Layout extends Component {
+  state = {
+    sideNavOpen: false,
+  };
+  setSideNavOpen() {}
+
   render() {
     return (
-      <>
-        <BrowserRouter>
-          <Header />
-          <MediaQuery maxDeviceWidth={1024}>
-            <SideNav />
-          </MediaQuery>
-          <MediaQuery maxDeviceWidth={375}>
-            <BottomNav />
-          </MediaQuery>
-          <Footer />
-        </BrowserRouter>
-      </>
+      <BrowserRouter>
+        <Header />
+        <MediaQuery maxDeviceWidth={1024}>
+          <SideNav />
+        </MediaQuery>
+        {this.props.children}
+        <MediaQuery maxDeviceWidth={375}>
+          <BottomNav />
+        </MediaQuery>
+        <Footer />
+      </BrowserRouter>
     );
   }
 }
