@@ -1,0 +1,16 @@
+.side-nav {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  @extend .shadow;
+}
+
+@media (max-width: 425px) {
+  .side-nav {
+    width: 75%;
+  }
+}
