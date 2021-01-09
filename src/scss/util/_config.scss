@@ -30,3 +30,12 @@ $font-family-base: $font-family-sans-serif;
 $link-color: $dark;
 $link-decoration: none;
 $link-hover-decoration: none;
+
+// Bootstrap container width
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1240px,
+  xxl: 1620px,
+);

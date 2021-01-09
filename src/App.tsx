@@ -1,8 +1,9 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 import { BrowserRouter } from "react-router-dom";
+import BottomNav from "./components/common/mobile_nav/BottomNav";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Main from "./pages/signin_signup/signin";
 import Homepage from "./pages/homepage/Homepage";
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Homepage />
+      <MediaQuery maxDeviceWidth={375}>
+        <BottomNav />
+      </MediaQuery>
       <Footer />
     </BrowserRouter>
   );
