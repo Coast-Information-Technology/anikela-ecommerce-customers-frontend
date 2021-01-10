@@ -63,8 +63,8 @@ const PickSecBtn = () => {
 
 const BannerSection = () => {
   return (
-    <div className="">
-      <img src={Banner} alt="banner" className="imgBanner" />
+    <div className="image-banner">
+      {/* <img src={Banner} alt="banner" className="imgBanner" /> */}
     </div>
   );
 };

@@ -1,3 +1,9 @@
+@font-face{
+  font-family: "Afrah";
+  src: local('Afrah'), url(../../fonts/Afrah-Bold.ttf) format('truetype');
+}
+
+
 .discount_img{
     width: 100%;
     height: auto;
@@ -65,6 +71,7 @@
 .slogan-title {
   color: #01010c;
   font-size: 34px;
+  font-family: Afrah,serif;
 }
 .slogan-description {
   color: #646464;
@@ -104,9 +111,15 @@
   flex: -50%;
 }
 
-.imgBanner{
+// .imgBanner{
+//   width: 100%;
+//   height: 90px;
+// }
+.image-banner{
+  background: url(../../assets/images/bannerimg.png);
   width: 100%;
-  height: 90px;
+  height: 100px;
+  transition: 1s;
 }
 .boxwrapper {
   width: 100%;
@@ -133,6 +146,7 @@
 }
 .txt_quickhass {
   font-size: 30px;
+  font-family: Afrah,serif;
 }
 
 .btn-shopnow {
@@ -149,7 +163,7 @@
   border-radius: 60%;
 }
 .video-content {
-  padding-top: 150px !important;
+  padding-top: 100px !important;
   height: 300px;
 }
 
@@ -170,6 +184,7 @@
     background-size: cover;
     flex: 100%;
     clip-path: inset(0 0 0 0);
+    margin-right: 2px;
   }
   .slogan-container {
     position: relative;
@@ -212,9 +227,16 @@
   .btn-woman {
     width: 100px;
     height: 40px;
-    margin-top: -70%;
+    margin-top: -100%;
     margin-left: 30%;
     flex: -100%;
+  }
+  .image-banner{
+    background: url(../../assets/images/banner2.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100px;
   }
   .videobox {
     width: 100%;
@@ -223,17 +245,13 @@
     top: 0;
     left: 0;
   }
-  .videobox video {
-    width: 100%;
-    height: auto;
-  }
   .overlaybox {
     position: absolute;
     width: 100%;
     z-index: 999;
   }
   .txt_quickhass {
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .btn-shopnow {
@@ -249,7 +267,29 @@
     font-weight: bold;
     border-radius: 60%;
   }
+  .videobox video {
+    object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
   .video-content {
-    padding-top: 30px !important;
+    padding-top: 100px !important;
   }
 }
+
+// @media (max-width: 375px) {
+//   .btn-man {
+//     width: 100px;
+//     height: 40px;
+//     margin-left: -35%;
+//     margin-top: -30px;
+//     flex: -100%;
+//   }
+//   .btn-woman {
+//     width: 100px;
+//     height: 40px;
+//     margin-top: -100%;
+//     margin-left: 30%;
+//     flex: -100%;
+//   }
+// }

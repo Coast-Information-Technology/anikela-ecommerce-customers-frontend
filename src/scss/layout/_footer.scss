@@ -118,3 +118,9 @@
   font-size: 14px;
   color: $primary;
 }
+@media (max-width: 768px) {
+.footer{
+  margin-top: -100px;
+}
+
+}
