@@ -2,17 +2,27 @@ import React from "react";
 // import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
 import Banner from "../../assets/images/bannerimg.png";
+import Discount from "../../assets/images/discount.png";
 import Video from "../../assets/video/showcase_video.mp4";
 
 const Homepage = () => {
   return (
     <div>
       {/* <Header/> */}
+      <DiscountSection />
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
-      <BannerSection/>
+      <BannerSection />
       <ShopDisp />
+    </div>
+  );
+};
+
+const DiscountSection = () => {
+  return (
+    <div className="">
+      <img src={Discount} alt="banner" className="discount_img" />
     </div>
   );
 };
@@ -54,7 +64,7 @@ const PickSecBtn = () => {
 const BannerSection = () => {
   return (
     <div className="">
-      <img src={Banner} alt="banner" className="imgBanner"/>
+      <img src={Banner} alt="banner" className="imgBanner" />
     </div>
   );
 };
