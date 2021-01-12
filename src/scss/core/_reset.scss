@@ -1,6 +1,9 @@
 /*
  contains style overrides relating to the browser dom
 */
+body {
+  position: relative;
+}
 
 ul {
   list-style-type: none;
