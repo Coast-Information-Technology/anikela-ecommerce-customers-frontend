@@ -1,7 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
-import Banner from "../../assets/images/bannerimg.png";
 import Discount from "../../assets/images/discount.png";
 import Video from "../../assets/video/showcase_video.mp4";
 
@@ -9,7 +8,6 @@ const Homepage = () => {
   return (
     <div>
       {/* <Header/> */}
-      <DiscountSection />
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
