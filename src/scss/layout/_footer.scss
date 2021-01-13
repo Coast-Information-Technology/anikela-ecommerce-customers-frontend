@@ -1,28 +1,3 @@
-.footer-cta {
-  width: 100%;
-  height: auto;
-  background: $dark;
-  padding: 0 4rem;
-}
-
-.footer-cta-section {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $light;
-  // padding: 0 4rem;
-}
-
-.footer-cta-section__btn {
-  width: 200px;
-  height: 50px;
-  border: 1px solid $light;
-  line-height: 50px;
-  text-align: center;
-  font-size: 0.8rem;
-}
 // Main Footer
 .footer {
   width: 100%;
@@ -39,7 +14,7 @@
 .footer-group {
   align-self: stretch;
   padding: 0.4rem 1rem;
-  flex: 1 0 280px;
+  flex: 1 0 250px;
 }
 
 .footer-group__header {
@@ -167,7 +142,7 @@
   margin: 0 1rem;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .footer-footnote {
     flex-direction: column-reverse;
   }
