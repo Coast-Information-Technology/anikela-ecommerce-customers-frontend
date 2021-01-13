@@ -30,20 +30,22 @@ const NavBar: React.FC = () => {
           </div>
         </MediaQuery>
         {isTabletScreen ? (
-          <MediaQuery maxDeviceWidth={375}>
+          <MediaQuery minDeviceWidth={375}>
             <SearchBarUtil />
           </MediaQuery>
         ) : (
           <SearchBar />
         )}
 
-        <MediaQuery minDeviceWidth={576}>
+        <MediaQuery minDeviceWidth={375}>
           <div className="nav-util">
             <Link to="dashboard">
               <Icon icon="user" title="your account" className="" size={24} />
             </Link>
           </div>
+        </MediaQuery>
 
+        <MediaQuery minDeviceWidth={576}>
           <div className="nav-util">
             <Link to="wishlist" className="">
               <Icon
