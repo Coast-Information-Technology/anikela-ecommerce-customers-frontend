@@ -94,8 +94,40 @@ const Footer: React.FC = () => {
             </button>
           </ul>
         </div>
+        <FooterFootNote />
       </div>
     </footer>
+  );
+};
+
+const FooterCtaSection: React.FC = () => {
+  return (
+    <div className="footer-cta-section">
+      <div role="button" className="footer-cta-section__btn">
+        Shop the collection now
+      </div>
+      <div className="footer-cta-section__lead">
+        Discounted prices you can trust. and some text for testing
+      </div>
+      <div role="button" className="footer-cta-section__btn">
+        Shop the collection now
+      </div>
+    </div>
+  );
+};
+
+const FooterFootNote: React.FC = () => {
+  return (
+    <div className="footer-footnote">
+      <div className="footnote__copyright">
+        &copy; Copyright Anikela {new Date().getFullYear()}
+      </div>
+      <div className="footnote__items">
+        <span className="footnote__item">privacy</span>
+        <span className="footnote__item">cookies</span>
+        <span className="footnote__item">accessibilty</span>
+      </div>
+    </div>
   );
 };
 
