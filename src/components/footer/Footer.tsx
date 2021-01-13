@@ -102,6 +102,7 @@ const Footer: React.FC = () => {
               </button>
             </ul>
           </div>
+          <div className="footer-icons"></div>
           <FooterFootNote />
         </div>
       </footer>
