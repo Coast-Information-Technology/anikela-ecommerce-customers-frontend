@@ -8,7 +8,7 @@ export const FooterCtaSection: React.FC = () => {
           Shop the collection now
         </button>
         <div className="footer-cta-section__lead">
-          Discounted prices you can trust. and some text for testing
+          Best discount price offers and quality products always
         </div>
         <button className="footer-cta-section__btn">
           Shop the collection now
