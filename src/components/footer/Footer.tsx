@@ -112,15 +112,17 @@ const Footer: React.FC = () => {
 
 const FooterCtaSection: React.FC = () => {
   return (
-    <div className="footer-cta-section">
-      <div role="button" className="footer-cta-section__btn">
-        Shop the collection now
-      </div>
-      <div className="footer-cta-section__lead">
-        Discounted prices you can trust. and some text for testing
-      </div>
-      <div role="button" className="footer-cta-section__btn">
-        Shop the collection now
+    <div className="footer-cta">
+      <div className="footer-cta-section container">
+        <div role="button" className="footer-cta-section__btn">
+          Shop the collection now
+        </div>
+        <div className="footer-cta-section__lead">
+          Discounted prices you can trust. and some text for testing
+        </div>
+        <div role="button" className="footer-cta-section__btn">
+          Shop the collection now
+        </div>
       </div>
     </div>
   );
