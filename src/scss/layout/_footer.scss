@@ -1,126 +1,125 @@
+.footer-cta {
+  width: 100%;
+  height: auto;
+  background: $dark;
+  padding: 0 4rem;
+}
+
+.footer-cta-section {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  // padding: 0 4rem;
+}
+
+.footer-cta-section__btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #fff;
+  line-height: 50px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 .footer {
   width: 100%;
-  max-width: none;
-  padding: 0;
-  background: #ffffff;
-  @extend .container;
-}
-
-.footer-group-container {
-  width: 100%;
   height: auto;
-  @extend .row, .pb-5;
+  padding: 2rem 0;
+  background-color: #ffffff;
 }
 
+.footer-group__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .footer-group {
-  @extend .col-lg-3, .col-md-4, .col-sm-6;
-  margin-bottom: 2rem;
+  align-self: stretch;
+  padding: 0.4rem 1rem;
+  flex: 1 0 280px;
 }
 
-.footer-group.subscribe {
-  @extend .col-lg-3, .col-md-12, .col-sm-6;
-}
-
-.footer-group .footer-input {
-  @extend .form-control, .m-0;
-}
-
-.footer-group-header {
-  // font-size: 18px;
+.footer-group__header {
   text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-.footer-group-links {
-  width: 100%;
-  height: auto;
-  @extend .p-0;
-}
-.footer-item {
-  margin: 0.4rem 0;
-}
-.footer-link {
-  text-transform: capitalize;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  word-spacing: 0.2rem;
   font-weight: 500;
-  transition: color 0.5s ease;
+  margin-bottom: 1.2rem;
 }
-.footer-link:hover {
-  color: $primary;
+.footer-group__item {
+  font-size: 0.86rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  text-transform: capitalize;
 }
 
-.footer-input {
-  @extend .form-control, .form-control-lg;
-  caret-color: $primary;
+.footer-group__input {
+  width: 100%;
+  display: block;
+  border: 1px solid #ced4da;
+  margin: 1rem 0;
+  padding: 0.4rem 0.4rem;
+  font-size: 1rem;
 }
-.footer-btn {
-  @extend .btn, .btn-secondary, .mt-3;
+
+.footer-group__submit {
+  outline: none;
+  display: block;
+  padding: 0.6rem 4rem;
+  font-weight: 500;
+  border: none;
+  text-transform: lowercase;
+  background: $dark;
+  color: #fff;
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .footer-icons {
-  height: auto;
-  @extend .row, .flex-lg-row, .flex-sm-column, .align-items-center, .py-5;
-}
-.footer-icons__social,
-.footer-icons__payment {
-  @extend .col-lg-6, .col-md-12, .d-flex;
+  margin: 2rem 0;
 }
 
-.footer-icon {
-  @extend .mx-4;
+.footer-footnote,
+.footnote__items {
+  display: flex;
+  font-size: 0.8rem;
 }
-.footer-icon:nth-child(1) {
-  @extend .ms-0;
+.footnote__copyright,
+.footnote__items {
+  margin: 1rem 0;
 }
-.footer-icon--img {
-  width: 2rem;
-  @extend .footer-icon;
+.footer-footnote {
+  flex-wrap: wrap;
+  font-weight: 600;
+  padding: 0.25rem 1rem;
+  color: $dark;
+  background: #fbfbfb;
 }
-.footer-icon:last-child {
-  @extend .me-0;
+.footnote__copyright {
+  flex: 2 0 50%;
 }
-.footer-icons__payment {
-  @extend .justify-content-between;
-}
-
-@media (max-width: 991.98px) {
-  .footer-icons__social,
-  .footer-icons__payment {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    justify-content: space-between;
-  }
-  .footer-icon {
-    margin: 0;
+@media (max-width: 998px) {
+  .footnote__copyright {
+    flex: 1 0 50%;
   }
 }
-
-.footnote {
-  width: 100%;
-  @extend .d-flex,
-    .flex-column-reverse,
-    .flex-md-row,
-    .flex-sm-column-reverse,
-    .pb-3;
-}
-.footnote-copyright {
-  display: block;
-  font-size: 14px;
-  @extend .align-self-sm-center;
+.footnote__items {
+  flex: 1 0 50%;
+  justify-content: flex-end;
 }
 
-.footnote-links {
-  width: 100%;
-  @extend .d-flex, .p-0;
-  justify-content: space-between;
+.footnote__item {
+  margin: 0 1rem;
 }
 
-.footnote-link {
-  font-size: 14px;
-  color: $primary;
-}
-@media (max-width: 768px) {
-.footer{
-  margin-top: -100px;
-}
-
+@media (max-width: 580px) {
+  .footer-footnote {
+    flex-direction: column-reverse;
+  }
+  // .footnote__items {
+  // }
 }
