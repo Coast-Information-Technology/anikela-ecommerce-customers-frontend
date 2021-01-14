@@ -1,34 +1,9 @@
-.footer-cta {
-  width: 100%;
-  height: auto;
-  background: $dark;
-  padding: 0 4rem;
-}
-
-.footer-cta-section {
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-  // padding: 0 4rem;
-}
-
-.footer-cta-section__btn {
-  width: 200px;
-  height: 50px;
-  border: 1px solid #fff;
-  line-height: 50px;
-  text-align: center;
-  font-size: 0.8rem;
-}
-
+// Main Footer
 .footer {
   width: 100%;
   height: auto;
   padding: 2rem 0;
-  background-color: #ffffff;
+  background-color: $light;
 }
 
 .footer-group__container {
@@ -39,7 +14,7 @@
 .footer-group {
   align-self: stretch;
   padding: 0.4rem 1rem;
-  flex: 1 0 280px;
+  flex: 1 0 250px;
 }
 
 .footer-group__header {
@@ -51,7 +26,7 @@
   margin-bottom: 1.2rem;
 }
 .footer-group__item {
-  font-size: 0.86rem;
+  font-size: 1rem;
   font-weight: 400;
   margin-bottom: 0.6rem;
   text-transform: capitalize;
@@ -74,15 +49,66 @@
   border: none;
   text-transform: lowercase;
   background: $dark;
-  color: #fff;
+  color: $light;
   border-radius: 0.2rem;
   cursor: pointer;
 }
 
+// Footer icon section
 .footer-icons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
   margin: 2rem 0;
+  padding: 1.4rem 1rem;
+}
+.footer-icons__payment,
+.footer-icons__social {
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
+.footer-icons__social {
+  .footer-icon {
+    margin-right: 3rem;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+}
+.footer-icons__payment {
+  justify-content: flex-end;
+  .footer-icon__img {
+    margin-left: 3rem;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+}
+.footer-icon__img {
+  width: 2.65rem;
+}
+
+@media (max-width: 768px) {
+  .footer-icons {
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  .footer-icons__social {
+    margin-bottom: 1.6rem;
+  }
+  .footer-icons__payment,
+  .footer-icons__social {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+// Footer copyright / legal section
 .footer-footnote,
 .footnote__items {
   display: flex;
@@ -116,10 +142,14 @@
   margin: 0 1rem;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 768px) {
   .footer-footnote {
     flex-direction: column-reverse;
   }
-  // .footnote__items {
-  // }
+  .footnote__copyright {
+    text-align: center;
+  }
+  .footnote__items {
+    justify-content: center;
+  }
 }
