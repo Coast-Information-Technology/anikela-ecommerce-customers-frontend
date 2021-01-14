@@ -17,9 +17,9 @@ class Layout extends Component {
     return (
       <BrowserRouter>
         <Header />
-        {/* <MediaQuery maxDeviceWidth={1024}>
+        <MediaQuery maxDeviceWidth={1024}>
           <SideNav />
-        </MediaQuery> */}
+        </MediaQuery>
         {this.props.children}
         <MediaQuery maxDeviceWidth={375}>
           <BottomNav />
