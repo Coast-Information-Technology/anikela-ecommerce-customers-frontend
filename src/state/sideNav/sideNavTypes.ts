@@ -2,7 +2,7 @@ export const OPEN = "OPEN";
 export const CLOSE = "CLOSE";
 
 export interface SideNavState {
-  isOpen: boolean;
+  isSideNavOpen: boolean;
 }
 interface OpenSideNavAction {
   type: typeof OPEN;
