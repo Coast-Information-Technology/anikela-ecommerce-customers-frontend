@@ -4,7 +4,7 @@ const initialState: SideNavState = {
   isOpen: false,
 };
 
-const sideNavReducer = (
+export const sideNavReducer = (
   state = initialState,
   action: SideNavActionTypes
 ): SideNavState => {
