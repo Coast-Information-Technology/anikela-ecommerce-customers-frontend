@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
           <ul className="footer-group">
             <li className="footer-group__header">sign up to our newsletter</li>
             <p className="footer-group__lead">
-              get the first looks at new drops,events,sales & offers
+              get the first looks at new drops, events, sales & offers
             </p>
             <label htmlFor={"subscribe"} className="visually-hidden">
               Enter your email address
