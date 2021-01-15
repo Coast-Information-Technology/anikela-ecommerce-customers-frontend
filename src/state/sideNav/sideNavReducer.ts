@@ -1,7 +1,7 @@
 import {
-  OPEN_SIDE_NAV,
   CLOSE_SIDE_NAV,
-  SideNavActionTypes,
+  OPEN_SIDE_NAV,
+  SideNavActionType,
   SideNavState,
 } from "./sideNavTypes";
 
@@ -11,17 +11,21 @@ const initialState: SideNavState = {
 
 export const sideNavReducer = (
   state = initialState,
-  action: SideNavActionTypes
+  action: SideNavActionType
 ): SideNavState => {
   switch (action.type) {
-    case OPEN_SIDE_NAV:
+    case OPEN_SIDE_NAV: {
       return {
+        ...state,
         isSideNavOpen: action.payload,
       };
-    case CLOSE_SIDE_NAV:
+    }
+    case CLOSE_SIDE_NAV: {
       return {
+        ...state,
         isSideNavOpen: action.payload,
       };
+    }
     default:
       return state;
   }
