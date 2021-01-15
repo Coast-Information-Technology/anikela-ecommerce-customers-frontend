@@ -1,28 +1,22 @@
 import React from "react";
 import Icon from "../icon/Icon";
-import { connect, ConnectedProps } from "react-redux";
-import { SideNavState } from "../../../state/sideNav/sideNavTypes";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../state/rootReducer";
+import { closeSideNav } from "../../../state/sideNav/sideNavAction";
 
-const mapStateToProps = (state: SideNavState) => ({
-  isOpen: state.isSideNavOpen,
-});
+const SideNav: React.FC = () => {
+  const isOpen = useSelector((state: RootState) => state.sidenav.isSideNavOpen);
+  const dispatch = useDispatch();
 
-const mapDispatchToProps = {
-  toggleSideNavState: () => ({ type: "OPEN_SIDE_NAV" }),
-};
+  const closeNavigation = () => {
+    dispatch(closeSideNav());
+  };
 
-const connector = connect(mapStateToProps, mapDispatchToProps);
-
-type PropsFromRedux = ConnectedProps<typeof connector>;
-
-interface SideNavProps extends PropsFromRedux {}
-
-const SideNav = (props: SideNavProps) => {
   return (
     <div className="contain">
-      <aside className="side-nav">
-        <h6>Side Nav {props.isOpen}</h6>
-        <button onClick={props.toggleSideNavState}>
+      <aside className={isOpen ? "side-nav open" : "side-nav"}>
+        <h6>Side Nav </h6>
+        <button className="btn" onClick={closeNavigation}>
           <Icon icon="close" title="close" size={24} fill="rgb(0,0,0)" />
         </button>
       </aside>
@@ -30,4 +24,4 @@ const SideNav = (props: SideNavProps) => {
   );
 };
 
-export default connector(SideNav);
+export default SideNav;
