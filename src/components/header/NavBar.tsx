@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
           <Link to="shopping-cart" className="position-relative">
             <Icon
               icon="shopping-bag"
-              title="your shopping cart"
+              title="shopping cart"
               className="nav-util__img"
               size={24}
             />
