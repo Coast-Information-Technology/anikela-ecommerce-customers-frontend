@@ -1,17 +1,17 @@
 import {
-  OPEN_SIDE_NAV,
   CLOSE_SIDE_NAV,
-  SideNavActionTypes,
+  OPEN_SIDE_NAV,
+  SideNavActionType,
 } from "./sideNavTypes";
 
-export const openSideNav = (): SideNavActionTypes => {
+export const openSideNav = (): SideNavActionType => {
   return {
     type: OPEN_SIDE_NAV,
     payload: true,
   };
 };
 
-export const closeSideNav = (): SideNavActionTypes => {
+export const closeSideNav = (): SideNavActionType => {
   return {
     type: CLOSE_SIDE_NAV,
     payload: false,
