@@ -178,9 +178,15 @@ const FooterFootNote: React.FC = () => {
         &copy; Copyright Anikela {new Date().getFullYear()}
       </div>
       <div className="footnote__items">
-        <span className="footnote__item">privacy</span>
-        <span className="footnote__item">cookies</span>
-        <span className="footnote__item">accessibilty</span>
+        <Link to="/" className="footnote__item">
+          privacy
+        </Link>
+        <Link to="/" className="footnote__item">
+          cookies
+        </Link>
+        <Link to="/" className="footnote__item">
+          accessibilty
+        </Link>
       </div>
     </div>
   );
