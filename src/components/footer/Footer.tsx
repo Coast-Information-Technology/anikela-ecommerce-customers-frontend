@@ -115,7 +115,7 @@ const FooterIconSection: React.FC = () => {
         <a href="https://www.facebook.com/" className="footer-icon facebook">
           <Icon
             icon="facebook"
-            title="like us on facebook"
+            title="facebook"
             fill="rgb(68,96,160)"
             viewBox="0 0 32 32"
             size={18}
@@ -124,7 +124,7 @@ const FooterIconSection: React.FC = () => {
         <a href="https://www.instagram.com/" className="footer-icon instagram">
           <Icon
             icon="instagram"
-            title="heart us on instagram"
+            title="instagram"
             fill="rgb(221, 42, 123)"
             viewBox="0 0 169 169"
             size={18}
@@ -133,7 +133,7 @@ const FooterIconSection: React.FC = () => {
         <a href="https://www.twitter.com/" className="footer-icon twitter">
           <Icon
             icon="twitter"
-            title="follow us on twitter"
+            title="twitter"
             fill="rgb(0,170,236)"
             viewBox="0 0 32 26.777"
             size={18}
@@ -142,7 +142,7 @@ const FooterIconSection: React.FC = () => {
         <a href="https://www.pinterest.com/" className="footer-icon pinterest">
           <Icon
             icon="pinterest"
-            title="follow us on pinterest"
+            title="pinterest"
             fill="rgb(204,33,39)"
             viewBox="0 0 32 32"
             size={18}
