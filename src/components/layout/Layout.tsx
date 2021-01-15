@@ -8,18 +8,13 @@ import Header from "../header/Header";
 import { FooterCtaSection } from "./Sections";
 
 class Layout extends Component {
-  state = {
-    sideNavOpen: false,
-  };
-  setSideNavOpen() {}
-
   render() {
     return (
       <BrowserRouter>
         <Header />
-        {/* <MediaQuery maxDeviceWidth={1024}>
+        <MediaQuery maxDeviceWidth={1024}>
           <SideNav />
-        </MediaQuery> */}
+        </MediaQuery>
         {this.props.children}
         <MediaQuery maxDeviceWidth={375}>
           <BottomNav />
