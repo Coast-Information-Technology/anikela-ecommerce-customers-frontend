@@ -87,19 +87,25 @@ const Footer: React.FC = () => {
               </Link>
             </li>
           </ul>
-          <ul className="footer-group">
-            <li className="footer-group__header">sign up to our newsletter</li>
+          <div className="footer-group">
+            <div className="footer-group__header">
+              sign up to our newsletter
+            </div>
             <p className="footer-group__lead">
               get the first looks at new drops, events, sales & offers
             </p>
             <label htmlFor={"subscribe"} className="visually-hidden">
               Enter your email address
             </label>
-            <input id="subscribe" type="text" className="footer-group__input" />
+            <input
+              id="subscribe"
+              type="email"
+              className="footer-group__input"
+            />
             <button type="submit" className="footer-group__submit">
               subscribe
             </button>
-          </ul>
+          </div>
         </div>
         <FooterIconSection />
         <FooterFootNote />
