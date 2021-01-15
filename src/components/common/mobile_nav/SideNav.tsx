@@ -13,14 +13,19 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <div className="contain">
-      <aside className={isOpen ? "side-nav open" : "side-nav"}>
+    <>
+      <div
+        role="dialog"
+        aria-label="Navigation Menu"
+        className={isOpen ? "side-nav open" : "side-nav"}
+      >
         <h6>Side Nav </h6>
         <button className="btn" onClick={closeNavigation}>
           <Icon icon="close" title="close" size={24} fill="rgb(0,0,0)" />
         </button>
-      </aside>
-    </div>
+      </div>
+      <aside role="button" aria-hidden="true"></aside>
+    </>
   );
 };
 

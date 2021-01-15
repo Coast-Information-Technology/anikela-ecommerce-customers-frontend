@@ -1,8 +1,3 @@
-.contain {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.212);
-}
 .side-nav {
   position: absolute;
   top: 0;
@@ -15,8 +10,9 @@
   align-items: center;
   background-color: $light;
   z-index: 9999;
+  display: none;
   transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-out;
   @extend .shadow-sm;
 }
 
