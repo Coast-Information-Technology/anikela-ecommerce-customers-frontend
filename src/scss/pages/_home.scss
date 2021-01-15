@@ -176,15 +176,16 @@
     background-size: cover;
     flex: 100%;
     clip-path: inset(0 0 0 0);
+    margin-right: -20px;
   }
   .clip-image-left {
     background: url(../../assets/images/img1.png);
     background-repeat: no-repeat;
-    background-position: -10px -50px;
+    background-position: -10px -90px;
     background-size: cover;
     flex: 100%;
     clip-path: inset(0 0 0 0);
-    margin-right: 2px;
+    margin-right: -20px;
   }
   .slogan-container {
     position: relative;
@@ -277,19 +278,23 @@
   }
 }
 
-// @media (max-width: 375px) {
+// @media (max-height: 1024px) {
 //   .btn-man {
 //     width: 100px;
-//     height: 40px;
-//     margin-left: -35%;
-//     margin-top: -30px;
+//     height: 100px;
+//     margin-left: -10%;
+//     margin-top: -10px;
 //     flex: -100%;
 //   }
 //   .btn-woman {
 //     width: 100px;
 //     height: 40px;
 //     margin-top: -100%;
-//     margin-left: 30%;
+//     margin-left: 50%;
 //     flex: -100%;
 //   }
 // }
+
+@media (max-width: 768px) {
+  
+}
