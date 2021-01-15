@@ -8,11 +8,6 @@ import Header from "../header/Header";
 import { FooterCtaSection } from "./Sections";
 
 class Layout extends Component {
-  state = {
-    sideNavOpen: false,
-  };
-  setSideNavOpen() {}
-
   render() {
     return (
       <BrowserRouter>
