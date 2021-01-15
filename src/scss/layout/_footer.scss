@@ -2,7 +2,7 @@
 .footer {
   width: 100%;
   height: auto;
-  padding: 2rem 0;
+  padding: 1.4rem 0;
   background-color: $light;
 }
 
@@ -13,30 +13,38 @@
 }
 .footer-group {
   align-self: stretch;
-  padding: 0.4rem 1rem;
+  padding: 0.28rem 0.65rem;
   flex: 1 0 250px;
 }
 
 .footer-group__header {
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   letter-spacing: -1px;
   word-spacing: 0.2rem;
   font-weight: 500;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
+}
+.footer-group__lead {
+  font-size: 0.8rem;
 }
 .footer-group__item {
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   margin-bottom: 0.6rem;
   text-transform: capitalize;
+}
+
+.footer-group__item:focus,
+.footer-group__item:hover {
+  color: $primary;
 }
 
 .footer-group__input {
   width: 100%;
   display: block;
   border: 1px solid #ced4da;
-  margin: 1rem 0;
+  margin: 0.6rem 0;
   padding: 0.4rem 0.4rem;
   font-size: 1rem;
 }
@@ -44,7 +52,8 @@
 .footer-group__submit {
   outline: none;
   display: block;
-  padding: 0.6rem 4rem;
+  // font-size: 0.6rem;
+  padding: 0.48rem 3.5rem;
   font-weight: 500;
   border: none;
   text-transform: lowercase;
@@ -62,7 +71,7 @@
   justify-content: stretch;
   align-items: center;
   margin: 2rem 0;
-  padding: 1.4rem 1rem;
+  padding: 0.2rem 1rem;
 }
 .footer-icons__payment,
 .footer-icons__social {
@@ -89,17 +98,18 @@
   }
 }
 .footer-icon__img {
-  width: 2.65rem;
+  width: 1.95rem;
+  height: auto;
 }
 
 @media (max-width: 768px) {
   .footer-icons {
     flex-direction: column;
     align-items: center;
-    margin: 1rem 0;
+    margin-top: 1.2rem;
   }
   .footer-icons__social {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
   }
   .footer-icons__payment,
   .footer-icons__social {
@@ -112,11 +122,11 @@
 .footer-footnote,
 .footnote__items {
   display: flex;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 .footnote__copyright,
 .footnote__items {
-  margin: 1rem 0;
+  margin: 0.2rem 0;
 }
 .footer-footnote {
   flex-wrap: wrap;
@@ -146,6 +156,7 @@
   .footer-footnote {
     flex-direction: column-reverse;
   }
+
   .footnote__copyright {
     text-align: center;
   }
