@@ -95,16 +95,20 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: 50px;
 }
 
 .sec_easydelivery {
   padding: 10px;
-  flex: 50%;
+  flex: 45%;
 }
 
 .sec_uniquedesigns {
   padding: 10px;
-  flex: 50%;
+  flex: 45%;
 }
 .sec {
   display: flex;
@@ -112,33 +116,43 @@
 .sec {
   img {
     margin-top: 10px;
+    margin-right: 10px;
     width: 30px;
     height: 25px;
   }
 }
 .banner_txtcontainer {
-  span {
+  p {
     text-transform: uppercase;
     font-weight: bolder;
     margin-left: 10px;
-    font-size: 17px;
+    font-size: 16px;
+    letter-spacing: 1px;
     color: $light;
   }
 }
 .sec1 {
-  margin: auto;
+  margin: 10px 10px 10px 20%;
   display: flex;
 }
 .sec1 {
   img {
     margin-top: 10px;
-    width: 30px;
+    width: 35px;
     height: 35px;
+  }
+  p{
+    margin-top: 15px;
   }
 }
 .sec2 {
-  margin: auto;
+  margin: 10px 5px 10px 20%;
   display: flex;
+}
+.sec2 {
+  p{
+    margin-top: 5px;
+  }
 }
 .boxwrapper {
   width: 100%;
@@ -186,7 +200,7 @@
   height: 300px;
 }
 
-// reduce scaling for both images on 768px
+// reduce for general screens
 @media (max-width: 768px){
   .clip-image-right {
     background: url(../../assets/images/imgmen.jpg);
@@ -242,6 +256,7 @@
     width: 100px;
     height: 40px;
     margin-left: -30%;
+    margin-top: 5%;
     flex: -100%;
   }
   .btn-woman {
@@ -253,14 +268,14 @@
   }
 
   .sec1 {
-    span {
+    p {
+      margin-top: 8px;
       font-size: 11px;
     }
   }
   .sec2 {
-    span {
-      font-size: 10.5px;
-      font-weight: bolder;
+    p {
+      font-size: 10px;
     }
   }
   .videobox {
@@ -325,13 +340,14 @@
   .btn-man {
     width: 80px;
     height: 40px;
-    margin-left: -40%;
+    margin-top: 10%;
+    margin-left: -45%;
     flex: -100%;
   }
   .btn-woman {
-    width: 100px;
+    width: 80px;
     height: 40px;
-    margin-top: -100%;
+    margin-top: -80%;
     margin-left: 30%;
     flex: -100%;
   }
@@ -341,14 +357,26 @@
       height: 20px;
     }
   }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
   .sec1 {
-    span {
+    p {
       font-size: 9px;
     }
   }
   .sec2 {
-    span {
-      font-size: 7px;
+    p {
+      font-size: 9px;
       font-weight: bolder;
     }
   }
@@ -367,7 +395,252 @@
     border-radius: 60%;
   }
 }
-
+@media only screen and (device-width: 411px){
+  .clip-image-right {
+    background: url(../../assets/images/imgmen.jpg);
+    background-repeat: no-repeat;
+    background-position: -10px -50px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -40px;
+  }
+  .clip-image-left {
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+    background-position: -10px -90px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -40px;
+  }
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -30%;
+    margin-top: 10%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -90%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 100px;
+  }
+  .sec{
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .sec1 {
+    p {
+      font-size: 11px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 9px;
+    }
+  }
+  .txt_quickhass {
+    font-size: 12px;
+  }
+  .btn-shopnow {
+    width: 60px;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 60%;
+  }
+}
+@media only screen and (device-width: 414px){
+  .clip-image-right {
+    background: url(../../assets/images/imgmen.jpg);
+    background-repeat: no-repeat;
+    background-position: -10px -50px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -40px;
+  }
+  .clip-image-left {
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+    background-position: -10px -90px;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -40px;
+  }
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -30%;
+    margin-top: 10%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 100px;
+  }
+  .sec{
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .sec1 {
+    p {
+      font-size: 11px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 9px;
+    }
+  }
+  .txt_quickhass {
+    font-size: 12px;
+  }
+  .btn-shopnow {
+    width: 60px;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 60%;
+  }
+}
+@media only screen and (device-width: 360px){
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -39%;
+    margin-top: -10%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 150px;
+  }
+  .sec2 {
+    margin: 10px 20px 10px 20px;
+    display: flex;
+  }
+  .sec{
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .sec1 {
+    p {
+      font-size: 11px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 10px;
+    }
+  }
+  .txt_quickhass {
+    font-size: 12px;
+  }
+  .btn-shopnow {
+    width: 60px;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 60%;
+  }
+}
+@media only screen and (device-width: 375px){
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -39%;
+    margin-top: 5%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+}
+@media only screen and (device-width: 280px){
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -50%;
+    margin-top: 5%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+}
 // // test scaling for ipad width
 @media only screen and (device-width: 768px){
   .clip-image-right {
@@ -391,7 +664,8 @@
   .btn-man {
     width: 100px;
     height: 40px;
-    margin-left: -10%;
+    margin-left: -17%;
+    margin-top: -40%;
     flex: -100%;
   }
   .btn-woman {
@@ -400,5 +674,30 @@
     margin-top: -75%;
     margin-left: 40%;
     flex: -100%;
+  }
+    .banner-section {
+      width: 100%;
+      height: 100px;
+      background-color: #88b4e1;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      margin-top: 150px;
+  }
+  .sec{
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .sec1 {
+    p {
+      font-size: 14px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 13px;
+    }
   }
 }
