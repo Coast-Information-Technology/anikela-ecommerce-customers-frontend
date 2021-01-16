@@ -1,44 +1,23 @@
-@font-face{
+@font-face {
   font-family: "Afrah";
-  src: local('Afrah'), url(../../fonts/Afrah-Bold.ttf) format('truetype');
+  src: local("Afrah"), url(../../fonts/Afrah-Bold.ttf) format("truetype");
 }
-
-
-.discount_img{
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
 .imagewrapper {
   position: relative;
   width: 100%;
   height: 95vh;
   display: flex;
   flex-wrap: wrap;
-  // padding: 0;
-  // margin: 0;
-  //  width: 100%;
-  // height: 95vh;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: start;
-  // overflow-x: hidden;
 }
 .clip-image-left {
-  // flex-basis: 60%;
-  // object-fit: cover;
-  // margin: 0;
-  // position: relative;
   background: url(../../assets/images/img1.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 10px;
   flex: 50%;
-      clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
-      margin-right: -10%;
-
+  clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+  margin-right: -10%;
 }
 
 .clip-image-right {
@@ -50,7 +29,6 @@
   flex: 50%;
   clip-path: polygon(0% 0%, 100% 0, 100% 100%, 20% 100%);
   margin-left: -2%;
-
 }
 
 .slogan-container {
@@ -71,7 +49,7 @@
 .slogan-title {
   color: #01010c;
   font-size: 34px;
-  font-family: Afrah,serif;
+  font-family: Afrah, serif;
 }
 .slogan-description {
   color: #646464;
@@ -110,16 +88,57 @@
   margin-left: 20%;
   flex: -50%;
 }
-
-// .imgBanner{
-//   width: 100%;
-//   height: 90px;
-// }
-.image-banner{
-  background: url(../../assets/images/bannerimg.png);
+.banner-section {
   width: 100%;
   height: 100px;
-  transition: 1s;
+  background-color: #88b4e1;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.sec_easydelivery {
+  padding: 10px;
+  flex: 50%;
+}
+
+.sec_uniquedesigns {
+  padding: 10px;
+  flex: 50%;
+}
+.sec {
+  display: flex;
+}
+.sec {
+  img {
+    margin-top: 10px;
+    width: 30px;
+    height: 25px;
+  }
+}
+.banner_txtcontainer {
+  span {
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-left: 10px;
+    font-size: 17px;
+    color: $light;
+  }
+}
+.sec1 {
+  margin: auto;
+  display: flex;
+}
+.sec1 {
+  img {
+    margin-top: 10px;
+    width: 30px;
+    height: 35px;
+  }
+}
+.sec2 {
+  margin: auto;
+  display: flex;
 }
 .boxwrapper {
   width: 100%;
@@ -146,7 +165,7 @@
 }
 .txt_quickhass {
   font-size: 30px;
-  font-family: Afrah,serif;
+  font-family: Afrah, serif;
 }
 
 .btn-shopnow {
@@ -168,7 +187,7 @@
 }
 
 // reduce scaling for both images on 768px
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .clip-image-right {
     background: url(../../assets/images/imgmen.jpg);
     background-repeat: no-repeat;
@@ -176,15 +195,16 @@
     background-size: cover;
     flex: 100%;
     clip-path: inset(0 0 0 0);
+    margin-right: -20px;
   }
   .clip-image-left {
     background: url(../../assets/images/img1.png);
     background-repeat: no-repeat;
-    background-position: -10px -50px;
+    background-position: -10px -90px;
     background-size: cover;
     flex: 100%;
     clip-path: inset(0 0 0 0);
-    margin-right: 2px;
+    margin-right: -20px;
   }
   .slogan-container {
     position: relative;
@@ -221,22 +241,27 @@
   .btn-man {
     width: 100px;
     height: 40px;
-    margin-left: -35%;
+    margin-left: -30%;
     flex: -100%;
   }
   .btn-woman {
     width: 100px;
     height: 40px;
-    margin-top: -100%;
-    margin-left: 30%;
+    margin-top: -60%;
+    margin-left: 40%;
     flex: -100%;
   }
-  .image-banner{
-    background: url(../../assets/images/banner2.png);
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100px;
+
+  .sec1 {
+    span {
+      font-size: 11px;
+    }
+  }
+  .sec2 {
+    span {
+      font-size: 10.5px;
+      font-weight: bolder;
+    }
   }
   .videobox {
     width: 100%;
@@ -269,27 +294,111 @@
   }
   .videobox video {
     object-fit: cover;
-  width: 100%;
-  height: 200px;
-}
+    width: 100%;
+    height: 200px;
+  }
   .video-content {
     padding-top: 100px !important;
   }
 }
 
-// @media (max-width: 375px) {
-//   .btn-man {
-//     width: 100px;
-//     height: 40px;
-//     margin-left: -35%;
-//     margin-top: -30px;
-//     flex: -100%;
-//   }
-//   .btn-woman {
-//     width: 100px;
-//     height: 40px;
-//     margin-top: -100%;
-//     margin-left: 30%;
-//     flex: -100%;
-//   }
-// }
+// change scaling 320px width size
+@media only screen and (device-width: 320px){
+  .clip-image-right {
+    background: url(../../assets/images/imgmen.jpg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -20px;
+  }
+  .clip-image-left {
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -20px;
+  }
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -40%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+  .sec{
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .sec1 {
+    span {
+      font-size: 9px;
+    }
+  }
+  .sec2 {
+    span {
+      font-size: 7px;
+      font-weight: bolder;
+    }
+  }
+  .txt_quickhass {
+    font-size: 12px;
+  }
+  .btn-shopnow {
+    width: 60px;
+    height: 40px;
+    padding-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 60%;
+  }
+}
+
+// // test scaling for ipad width
+@media only screen and (device-width: 768px){
+  .clip-image-right {
+    background: url(../../assets/images/imgmen.jpg);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -30px;
+  }
+  .clip-image-left {
+    background: url(../../assets/images/img1.png);
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-size: cover;
+    flex: 100%;
+    clip-path: inset(0 0 0 0);
+    margin-right: -30px;
+  }
+  .btn-man {
+    width: 100px;
+    height: 40px;
+    margin-left: -10%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -75%;
+    margin-left: 40%;
+    flex: -100%;
+  }
+}
