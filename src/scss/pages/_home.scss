@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 .clip-image-left {
-  background: url(../../assets/images/img1.png);
+  background: url(../../assets/images/imgwomen.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -21,7 +21,7 @@
 }
 
 .clip-image-right {
-  background: url(../../assets/images/imgmen.jpg);
+  background: url(../../assets/images/imgmen.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -141,7 +141,7 @@
     width: 35px;
     height: 35px;
   }
-  p{
+  p {
     margin-top: 15px;
   }
 }
@@ -150,7 +150,7 @@
   display: flex;
 }
 .sec2 {
-  p{
+  p {
     margin-top: 5px;
   }
 }
@@ -201,9 +201,9 @@
 }
 
 // reduce for general screens
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .clip-image-right {
-    background: url(../../assets/images/imgmen.jpg);
+    background: url(../../assets/images/imgmen.webp);
     background-repeat: no-repeat;
     background-position: -10px -50px;
     background-size: cover;
@@ -212,7 +212,7 @@
     margin-right: -20px;
   }
   .clip-image-left {
-    background: url(../../assets/images/img1.png);
+    background: url(../../assets/images/imgwomen.webp);
     background-repeat: no-repeat;
     background-position: -10px -90px;
     background-size: cover;
@@ -316,27 +316,50 @@
     padding-top: 100px !important;
   }
 }
-
+// // test scaling forgeneral  ipad landscape and portrait
+@media only screen and (device-width: 768px) {
+  .btn-man {
+    width: 100px;
+    height: 40px;
+    margin-left: -17%;
+    margin-top: 3%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -60%;
+    margin-left: 40%;
+    flex: -100%;
+  }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: 150px;
+  }
+  .sec {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .sec1 {
+    p {
+      font-size: 14px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 13px;
+    }
+  }
+}
 // change scaling 320px width size
-@media only screen and (device-width: 320px){
-  .clip-image-right {
-    background: url(../../assets/images/imgmen.jpg);
-    background-repeat: no-repeat;
-    background-position: initial;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -20px;
-  }
-  .clip-image-left {
-    background: url(../../assets/images/img1.png);
-    background-repeat: no-repeat;
-    background-position: initial;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -20px;
-  }
+@media only screen and (device-width: 320px) {
   .btn-man {
     width: 80px;
     height: 40px;
@@ -351,8 +374,8 @@
     margin-left: 30%;
     flex: -100%;
   }
-  .sec{
-    img{
+  .sec {
+    img {
       width: 20px;
       height: 20px;
     }
@@ -395,25 +418,7 @@
     border-radius: 60%;
   }
 }
-@media only screen and (device-width: 411px){
-  .clip-image-right {
-    background: url(../../assets/images/imgmen.jpg);
-    background-repeat: no-repeat;
-    background-position: -10px -50px;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -40px;
-  }
-  .clip-image-left {
-    background: url(../../assets/images/img1.png);
-    background-repeat: no-repeat;
-    background-position: -10px -90px;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -40px;
-  }
+@media only screen and (device-width: 411px) {
   .btn-man {
     width: 80px;
     height: 40px;
@@ -440,8 +445,8 @@
     box-sizing: border-box;
     margin-top: 100px;
   }
-  .sec{
-    img{
+  .sec {
+    img {
       width: 30px;
       height: 30px;
     }
@@ -471,25 +476,7 @@
     border-radius: 60%;
   }
 }
-@media only screen and (device-width: 414px){
-  .clip-image-right {
-    background: url(../../assets/images/imgmen.jpg);
-    background-repeat: no-repeat;
-    background-position: -10px -50px;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -40px;
-  }
-  .clip-image-left {
-    background: url(../../assets/images/img1.png);
-    background-repeat: no-repeat;
-    background-position: -10px -90px;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -40px;
-  }
+@media only screen and (device-width: 414px) {
   .btn-man {
     width: 80px;
     height: 40px;
@@ -516,8 +503,8 @@
     box-sizing: border-box;
     margin-top: 100px;
   }
-  .sec{
-    img{
+  .sec {
+    img {
       width: 30px;
       height: 30px;
     }
@@ -547,7 +534,24 @@
     border-radius: 60%;
   }
 }
-@media only screen and (device-width: 360px){
+
+@media only screen and (device-width: 375px) {
+  .btn-man {
+    width: 80px;
+    height: 40px;
+    margin-left: -39%;
+    margin-top: 5%;
+    flex: -100%;
+  }
+  .btn-woman {
+    width: 100px;
+    height: 40px;
+    margin-top: -100%;
+    margin-left: 30%;
+    flex: -100%;
+  }
+}
+@media only screen and (device-width: 360px) {
   .btn-man {
     width: 80px;
     height: 40px;
@@ -578,8 +582,8 @@
     margin: 10px 20px 10px 20px;
     display: flex;
   }
-  .sec{
-    img{
+  .sec {
+    img {
       width: 20px;
       height: 20px;
     }
@@ -609,23 +613,7 @@
     border-radius: 60%;
   }
 }
-@media only screen and (device-width: 375px){
-  .btn-man {
-    width: 80px;
-    height: 40px;
-    margin-left: -39%;
-    margin-top: 5%;
-    flex: -100%;
-  }
-  .btn-woman {
-    width: 100px;
-    height: 40px;
-    margin-top: -100%;
-    margin-left: 30%;
-    flex: -100%;
-  }
-}
-@media only screen and (device-width: 280px){
+@media only screen and (device-width: 280px) {
   .btn-man {
     width: 80px;
     height: 40px;
@@ -641,63 +629,4 @@
     flex: -100%;
   }
 }
-// // test scaling for ipad width
-@media only screen and (device-width: 768px){
-  .clip-image-right {
-    background: url(../../assets/images/imgmen.jpg);
-    background-repeat: no-repeat;
-    background-position: initial;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -30px;
-  }
-  .clip-image-left {
-    background: url(../../assets/images/img1.png);
-    background-repeat: no-repeat;
-    background-position: initial;
-    background-size: cover;
-    flex: 100%;
-    clip-path: inset(0 0 0 0);
-    margin-right: -30px;
-  }
-  .btn-man {
-    width: 100px;
-    height: 40px;
-    margin-left: -17%;
-    margin-top: -40%;
-    flex: -100%;
-  }
-  .btn-woman {
-    width: 100px;
-    height: 40px;
-    margin-top: -75%;
-    margin-left: 40%;
-    flex: -100%;
-  }
-    .banner-section {
-      width: 100%;
-      height: 100px;
-      background-color: #88b4e1;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      margin-top: 150px;
-  }
-  .sec{
-    img{
-      width: 30px;
-      height: 30px;
-    }
-  }
-  .sec1 {
-    p {
-      font-size: 14px;
-    }
-  }
-  .sec2 {
-    p {
-      font-size: 13px;
-    }
-  }
-}
+
