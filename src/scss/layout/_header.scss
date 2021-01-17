@@ -17,18 +17,14 @@
 }
 
 .navbar {
-  @extend .p-0, .m-0, .flex-nowrap;
+  @extend .pt-1, .p-0, .m-0, .flex-nowrap;
 }
 
 .navbar-nav {
   flex: 2;
   height: 50px;
   align-items: center;
-  @extend .bg-dark,
-    .px-2,
-    .flex-row,
-    .align-items-center,
-    .justify-content-evenly;
+  @extend .flex-row, .align-items-center, .justify-content-evenly;
 }
 .navbar__link {
   flex: 1;
@@ -37,8 +33,7 @@
   text-align: center;
   position: relative;
   text-transform: uppercase;
-  color: $light;
-  @extend .nav-link, .bg-dark;
+  @extend .nav-link;
 }
 .navbar__link::after {
   content: "";
@@ -52,7 +47,6 @@
 }
 .navbar__link:hover {
   text-decoration: none;
-  color: $light;
 }
 
 .navbar__link:hover::after,
