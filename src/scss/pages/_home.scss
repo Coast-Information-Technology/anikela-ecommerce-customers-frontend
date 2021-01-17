@@ -124,7 +124,7 @@
 .banner_txtcontainer {
   p {
     text-transform: uppercase;
-    font-weight: bolder;
+    font-weight: 900;
     margin-left: 10px;
     font-size: 16px;
     letter-spacing: 1px;
@@ -339,7 +339,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-top: 150px;
+    margin-top: -66px;
   }
   .sec {
     img {
@@ -390,7 +390,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: -75px;
   }
   .sec1 {
     p {
@@ -443,7 +443,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: -85px;
   }
   .sec {
     img {
@@ -501,7 +501,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: -86px;
   }
   .sec {
     img {
@@ -550,6 +550,29 @@
     margin-left: 30%;
     flex: -100%;
   }
+  .banner-section {
+    width: 100%;
+    height: 100px;
+    background-color: #88b4e1;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    margin-top: -62.5px;
+  }
+  .sec1 {
+    p {
+      font-size: 9px;
+    }
+  }
+  .sec2 {
+    p {
+      font-size: 9px;
+      font-weight: bolder;
+    }
+  }
 }
 @media only screen and (device-width: 360px) {
   .btn-man {
@@ -576,7 +599,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    margin-top: 150px;
+    margin-top: -10px;
   }
   .sec2 {
     margin: 10px 20px 10px 20px;
