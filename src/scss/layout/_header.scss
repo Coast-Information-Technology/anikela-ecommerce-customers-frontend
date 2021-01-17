@@ -17,7 +17,7 @@
 }
 
 .navbar {
-  @extend .pt-1, .p-0, .m-0, .flex-nowrap;
+  @extend .p-0, .m-0, .flex-nowrap;
 }
 
 .navbar-nav {
@@ -28,14 +28,19 @@
 }
 .navbar__link {
   flex: 1;
-  line-height: 1.5;
-  font-size: 14px;
+  line-height: 50px;
+  font-size: 0.85rem;
   font-weight: 600;
   text-align: center;
   position: relative;
   text-transform: uppercase;
-  border: 1px solid #dddddd;
-  @extend .nav-link, .mx-1;
+  border-right: 1px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
+  align-self: stretch;
+  @extend .nav-link, .p-0;
+}
+.navbar__link:nth-child(1) {
+  border-right: none;
 }
 .navbar__link::after {
   content: "";
