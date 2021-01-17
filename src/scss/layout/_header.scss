@@ -24,16 +24,18 @@
   flex: 2;
   height: 50px;
   align-items: center;
-  @extend .flex-row, .align-items-center, .justify-content-evenly;
+  @extend .px-2, .flex-row, .align-items-center, .justify-content-evenly;
 }
 .navbar__link {
   flex: 1;
+  line-height: 1.5;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
   position: relative;
   text-transform: uppercase;
-  @extend .nav-link;
+  border: 1px solid #dddddd;
+  @extend .nav-link, .mx-1;
 }
 .navbar__link::after {
   content: "";
