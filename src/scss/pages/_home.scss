@@ -5,7 +5,7 @@
 .imagewrapper {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-wrap: wrap;
 }
@@ -78,7 +78,8 @@
   font-weight: bolder;
 }
 .btn-man {
-  background: #fbfbfb;
+  background-color: #01010c;
+  color: #88b4e1;
   margin-left: 40%;
   flex: -50%;
 }
