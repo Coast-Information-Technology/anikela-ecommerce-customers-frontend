@@ -59,9 +59,7 @@ const BannerSection = () => {
         <div className="sec1">
           <img src={deliverytruckImage} alt="delivery" className="" />
           <div className="banner_txtcontainer">
-            <span>Easy Door To</span>
-            <br />
-            <span>Door Delivery</span>
+            <p>Easy Door To Door Delivery</p>
           </div>
         </div>
       </div>
@@ -69,9 +67,7 @@ const BannerSection = () => {
         <div className="sec2">
           <img src={favoriteImage} alt="favorite" className="" />
           <div className="banner_txtcontainer">
-            <span>Discover Unique Designs</span>
-            <br />
-            <span>From Over 50 Brands</span>
+            <p>Discover Unique Designs From Over 50 Brands</p>
           </div>
         </div>
       </div>
