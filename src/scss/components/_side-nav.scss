@@ -1,22 +1,13 @@
-.contain {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.212);
-}
 .side-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 45%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
   background-color: $light;
   z-index: 9999;
   transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease-out;
   @extend .shadow-sm;
 }
 
@@ -25,7 +16,12 @@
 }
 
 .side-nav__toggle {
-  align-self: stretch;
+}
+.side-nav__content {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 4rem 4rem;
 }
 
 @media (max-width: 425px) {
