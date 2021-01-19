@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import Icon from "../icon/Icon";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/rootReducer";
 import { closeSideNav } from "../../../state/sideNav/sideNavAction";
+import { Modal } from "../CustomModal";
+import useOnClickOutside from "../../../hooks";
 
 const SideNav: React.FC = () => {
   const isOpen = useSelector((state: RootState) => state.sidenav.isSideNavOpen);
@@ -12,20 +14,26 @@ const SideNav: React.FC = () => {
     dispatch(closeSideNav());
   };
 
+  const componentRef = useRef<HTMLDivElement>(null);
+  useOnClickOutside(componentRef, closeNavigation);
+
   return (
-    <>
-      <div
+    <div>
+      <Modal handleClose={closeNavigation} show={isOpen} />
+      <nav
         role="dialog"
         aria-label="Navigation Menu"
         className={isOpen ? "side-nav open" : "side-nav"}
+        ref={componentRef}
       >
-        <h6>Side Nav </h6>
-        <button className="btn" onClick={closeNavigation}>
-          <Icon icon="close" title="close" size={24} fill="rgb(0,0,0)" />
-        </button>
-      </div>
-      <aside role="button" aria-hidden="true"></aside>
-    </>
+        <div className="side-nav__content">
+          <h6>Side Nav </h6>
+          <button className="btn" onClick={closeNavigation}>
+            <Icon icon="close" title="close" size={24} fill="rgb(0,0,0)" />
+          </button>
+        </div>
+      </nav>
+    </div>
   );
 };
 
