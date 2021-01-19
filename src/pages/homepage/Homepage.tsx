@@ -1,8 +1,9 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
-import Discount from "../../assets/images/discount.png";
 import Video from "../../assets/video/showcase_video.mp4";
+import deliverytruckImage from "../../assets/resources/shipped.svg";
+import favoriteImage from "../../assets/resources/star.svg";
 
 const Homepage = () => {
   return (
@@ -13,14 +14,6 @@ const Homepage = () => {
       <PickSecBtn />
       <BannerSection />
       <ShopDisp />
-    </div>
-  );
-};
-
-const DiscountSection = () => {
-  return (
-    <div className="">
-      <img src={Discount} alt="banner" className="discount_img" />
     </div>
   );
 };
@@ -61,8 +54,23 @@ const PickSecBtn = () => {
 
 const BannerSection = () => {
   return (
-    <div className="image-banner">
-      {/* <img src={Banner} alt="banner" className="imgBanner" /> */}
+    <div className="banner-section">
+      <div className="sec sec_easydelivery">
+        <div className="sec1">
+          <img src={deliverytruckImage} alt="delivery" className="" />
+          <div className="banner_txtcontainer">
+            <p>Easy Door To Door Delivery</p>
+          </div>
+        </div>
+      </div>
+      <div className="sec sec_uniquedesigns">
+        <div className="sec2">
+          <img src={favoriteImage} alt="favorite" className="" />
+          <div className="banner_txtcontainer">
+            <p>Discover Unique Designs From Over 50 Brands</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
