@@ -10,7 +10,7 @@ import Discount from "../../assets/images/discount_img.jpg";
 const Homepage = () => {
   return (
     <div>
-      <TopBanner/>
+      <TopBanner />
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
@@ -22,16 +22,15 @@ const Homepage = () => {
 
 const TopBanner = () => {
   return (
- <div className="container homebanner">
-    {/* <img src={Welcome} alt="favorite" className="welcomeImg" /> */}
-    <div className="welcome-txt_container">
+    <div className="homebanner">
+      {/* <img src={Welcome} alt="favorite" className="welcomeImg" /> */}
+      {/* <div className="welcome-txt_container">
       <p>Welcome to ANIKELA</p>
-      </div>
+      </div> */}
       <div className="discount-container">
-            <img src={Discount} alt="favorite" className="discount_img" />
+        <img src={Discount} alt="discount" className="discount_img" />
       </div>
-
- </div>
+    </div>
   );
 };
 
