@@ -2,6 +2,31 @@
   font-family: "Afrah";
   src: local("Afrah"), url(../../fonts/Afrah-Bold.ttf) format("truetype");
 }
+.welcome-txt_container{
+  background-color: #000;
+  width: 40%;
+  height: 70px;
+  margin: auto;
+  margin-top: 20px;
+}
+.welcome-txt_container{
+  p{
+    color: $light;
+    font-size: 1.8rem;
+    text-align: center;
+ padding-top: 15px;
+  }
+}
+.discount-container{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.discount_img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 .imagewrapper {
   position: relative;
   width: 100%;
@@ -203,6 +228,17 @@
 
 // reduce for general screens
 @media (max-width: 768px) {
+  .welcome-txt_container{
+    p{
+      font-size: 1.2rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 80%;
+    height: 50px;
+  }
   .clip-image-right {
     background: url(../../assets/images/imgmen.webp);
     background-repeat: no-repeat;
@@ -362,6 +398,20 @@
 }
 // change scaling 320px width size
 @media only screen and (device-width: 320px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.7rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 90%;
+    height: 40px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;
@@ -421,6 +471,19 @@
   }
 }
 @media only screen and (device-width: 411px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.9rem;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 80%;
+    height: 45px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;
@@ -479,6 +542,20 @@
   }
 }
 @media only screen and (device-width: 414px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.9rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 80%;
+    height: 40px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;
@@ -538,6 +615,20 @@
 }
 
 @media only screen and (device-width: 375px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.8rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 80%;
+    height: 40px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;
@@ -577,6 +668,20 @@
   }
 }
 @media only screen and (device-width: 360px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.8rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 80%;
+    height: 50px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;
@@ -639,6 +744,20 @@
   }
 }
 @media only screen and (device-width: 280px) {
+  .welcome-txt_container{
+    height: 50px;
+  }
+  .welcome-txt_container{
+    p{
+      font-size: 0.6rem;
+      text-align: center;
+   padding-top: 20px;
+    }
+  }
+  .discount_img{
+    width: 90%;
+    height: 35px;
+  }
   .btn-man {
     width: 80px;
     height: 40px;

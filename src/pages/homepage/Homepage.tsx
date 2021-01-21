@@ -4,17 +4,34 @@ import React from "react";
 import Video from "../../assets/video/showcase_video.mp4";
 import deliverytruckImage from "../../assets/resources/shipped.svg";
 import favoriteImage from "../../assets/resources/star.svg";
+import Welcome from "../../assets/images/welcomeimg.jpeg";
+import Discount from "../../assets/images/discount_img.jpg";
 
 const Homepage = () => {
   return (
     <div>
-      {/* <Header/> */}
+      <TopBanner/>
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
       <BannerSection />
       <ShopDisp />
     </div>
+  );
+};
+
+const TopBanner = () => {
+  return (
+ <div className="container homebanner">
+    {/* <img src={Welcome} alt="favorite" className="welcomeImg" /> */}
+    <div className="welcome-txt_container">
+      <p>Welcome to ANIKELA</p>
+      </div>
+      <div className="discount-container">
+            <img src={Discount} alt="favorite" className="discount_img" />
+      </div>
+
+ </div>
   );
 };
 
