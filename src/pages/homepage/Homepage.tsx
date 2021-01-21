@@ -22,13 +22,13 @@ const Homepage = () => {
 
 const TopBanner = () => {
   return (
- <div className="container homebanner">
+ <div className="homebanner">
     {/* <img src={Welcome} alt="favorite" className="welcomeImg" /> */}
-    <div className="welcome-txt_container">
+    {/* <div className="welcome-txt_container">
       <p>Welcome to ANIKELA</p>
-      </div>
+      </div> */}
       <div className="discount-container">
-            <img src={Discount} alt="favorite" className="discount_img" />
+            <img src={Discount} alt="discount" className="discount_img" />
       </div>
 
  </div>
