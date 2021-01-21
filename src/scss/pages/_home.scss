@@ -2,16 +2,16 @@
   font-family: "Afrah";
   src: local("Afrah"), url(../../fonts/Afrah-Bold.ttf) format("truetype");
 }
-.homebanner{
+.homebanner {
   width: 100%;
   height: 70px;
   background: #000;
 }
-.discount-container{
+.discount-container {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.discount_img{
+.discount_img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -94,7 +94,7 @@
   font-weight: bolder;
 }
 .btn-man {
-  background-color: #E6e6e6;
+  background-color: #e6e6e6;
   color: #01010c;
   margin-left: 40%;
   flex: -50%;
@@ -219,14 +219,14 @@
 
 // reduce for general screens
 @media (max-width: 768px) {
-  .welcome-txt_container{
-    p{
+  .welcome-txt_container {
+    p {
       font-size: 1.2rem;
       text-align: center;
-   padding-top: 20px;
+      padding-top: 20px;
     }
   }
-  .discount_img{
+  .discount_img {
     width: 80%;
     height: 50px;
   }
@@ -389,12 +389,12 @@
 }
 // change scaling 320px width size
 @media only screen and (device-width: 320px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     width: 90%;
     height: 40px;
     padding-top: 5px;
@@ -458,12 +458,12 @@
   }
 }
 @media only screen and (device-width: 411px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     width: 80%;
     height: 40px;
     padding-top: 5px;
@@ -526,12 +526,12 @@
   }
 }
 @media only screen and (device-width: 414px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     width: 80%;
     height: 40px;
     padding-top: 5px;
@@ -595,12 +595,12 @@
 }
 
 @media only screen and (device-width: 375px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     width: 80%;
     height: 40px;
     padding-top: 5px;
@@ -644,12 +644,12 @@
   }
 }
 @media only screen and (device-width: 360px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     padding-top: 10px;
     width: 80%;
     height: 40px;
@@ -716,12 +716,12 @@
   }
 }
 @media only screen and (device-width: 280px) {
-  .homebanner{
+  .homebanner {
     width: 100%;
     height: 50px;
     background: #000;
   }
-  .discount_img{
+  .discount_img {
     width: 90%;
     height: 35px;
     padding-top: 5px;
@@ -741,4 +741,3 @@
     flex: -100%;
   }
 }
-
