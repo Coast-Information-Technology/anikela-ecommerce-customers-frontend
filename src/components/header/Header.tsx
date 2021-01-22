@@ -11,9 +11,9 @@ const Header = () => {
         <MiniNavBar />
       </MediaQuery>
       <NavBar />
-      <MediaQuery minDeviceWidth={1024}>
+      {/* <MediaQuery minDeviceWidth={1024}>
         <SubNavBar />
-      </MediaQuery>
+      </MediaQuery> */}
     </header>
   );
 };
