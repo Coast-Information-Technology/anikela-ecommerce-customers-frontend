@@ -81,7 +81,9 @@ export const Tab: React.FC<TabProps> = (props) => {
   }
   return (
     <li className={className} onClick={onTabClick}>
-      {title}
+      <span className={activeTab === label ? "tab-link" : "tab-link active"}>
+        {title}
+      </span>
     </li>
   );
 };
