@@ -1,6 +1,16 @@
 .mega-menu {
   width: 100%;
   background-color: $dark;
+  position: relative;
+  .tab-content__container {
+    position: relative;
+  }
+  .custom-modal {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+  }
 
   .tab-list {
     margin-bottom: 0 !important;
@@ -22,7 +32,7 @@
       left: 0;
       width: 0%;
       height: 0%;
-      z-index: 1;
+      z-index: 3;
       position: absolute;
       transition: all 500ms ease;
       transform: skew(30deg);
@@ -41,7 +51,7 @@
     text-align: center;
     font-weight: 500;
     position: relative;
-    z-index: 2;
+    z-index: 4;
     &:hover,
     &:focus,
     &:active {
@@ -62,5 +72,28 @@
   .tab:active::after {
     width: 100%;
     height: 100%;
+  }
+  .tab-content {
+    height: 400px;
+    width: 100%;
+    transition: all 0.5s ease;
+    background-color: $light;
+    position: absolute;
+    z-index: 1800;
+    // to be remeoved style a created content wrapper instead
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    // ------
+    &::after {
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(to left, #88b4e1 30%, #f39fae 80%);
+    }
   }
 }
