@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Icon from "../icon/Icon";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/rootReducer";
@@ -13,6 +13,14 @@ const SideNav: React.FC = () => {
   const closeNavigation = () => {
     dispatch(closeSideNav());
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpen]);
 
   const componentRef = useRef<HTMLDivElement>(null);
   useOnClickOutside(componentRef, closeNavigation);
