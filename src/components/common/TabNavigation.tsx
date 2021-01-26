@@ -30,7 +30,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
 
   return (
     <nav className={className} onMouseLeave={closeTabNavigation}>
-      <ul className="tab-list">
+      <div className="tab-list">
         {items.map((child: React.ReactElement) => {
           const { label, tabTitle } = child.props;
           return (
@@ -43,7 +43,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
             />
           );
         })}
-      </ul>
+      </div>
       <nav className="tab-content__container">
         <Modal
           show={true}
@@ -91,20 +91,14 @@ export const Tab: React.FC<TabProps> = (props) => {
     onHover(label);
   };
   let active: boolean = activeTab === label;
-  let className = "tab";
-
-  if (active) {
-    className += " tab active";
-  }
   return (
-    <div
-      role="button"
+    <button
       aria-controls={label}
       aria-expanded={active}
-      className={className}
+      className={active ? "tab active" : "tab"}
       onMouseEnter={onTabClick}
     >
       <span className={active ? "tab-link active" : "tab-link"}>{title}</span>
-    </div>
+    </button>
   );
 };
