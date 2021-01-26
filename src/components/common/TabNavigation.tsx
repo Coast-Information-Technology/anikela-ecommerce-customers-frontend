@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { Modal } from "./CustomModal";
 
 interface TabNavigationProps {
   className?: string;
   children: React.ReactNode;
+  isOpen?: boolean;
 }
 export const TabNavigation: React.FC<TabNavigationProps> = ({
   children,
@@ -14,20 +16,20 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
   const elements = <>{children}</>;
   const items = elements.props.children;
   const [active, setActive] = useState(" ");
+  const [open, setOpen] = useState(false);
 
-  // const closeTabNavigation = () => {
-  //   setActive(" ");
-  // };
   const onTabClick = (label: string) => {
-    if (label === active) {
-      setActive(" ");
-    } else {
-      setActive(label);
-    }
+    setActive(label);
+    setOpen(true);
+  };
+
+  const closeTabNavigation = () => {
+    setActive(" ");
+    setOpen(false);
   };
 
   return (
-    <nav className={className}>
+    <nav className={className} onMouseLeave={closeTabNavigation}>
       <ul className="tab-list">
         {items.map((child: React.ReactElement) => {
           const { label, tabTitle } = child.props;
@@ -37,17 +39,32 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
               title={tabTitle}
               label={label}
               key={label}
-              onClick={onTabClick}
+              onHover={onTabClick}
             />
           );
         })}
       </ul>
-      <div className="tab-content">
+      <nav className="tab-content__container">
+        <Modal
+          show={true}
+          handleClose={closeTabNavigation}
+          showCloseBtn={false}
+          style={open ? { height: "100vh" } : { height: "0" }}
+        />
         {items.map((child: React.ReactElement) => {
-          if (child.props.label !== active) return undefined;
-          return child.props.children;
+          let current = child.props.label === active;
+          if (!current) return undefined;
+          return (
+            <div
+              key={child.props.label}
+              className={current ? "tab-content active" : "tab-content"}
+              onMouseLeave={closeTabNavigation}
+            >
+              {child.props.children}
+            </div>
+          );
         })}
-      </div>
+      </nav>
     </nav>
   );
 };
@@ -65,25 +82,29 @@ interface TabProps {
   title: string;
   activeTab?: string;
   label: string;
-  onClick: (label: string) => void;
+  onHover: (label: string) => void;
 }
 
 export const Tab: React.FC<TabProps> = (props) => {
-  const { activeTab, label, title, onClick } = props;
+  const { activeTab, label, title, onHover } = props;
   const onTabClick = () => {
-    onClick(label);
-    console.log(activeTab);
+    onHover(label);
   };
+  let active: boolean = activeTab === label;
   let className = "tab";
 
-  if (activeTab === label) {
+  if (active) {
     className += " tab active";
   }
   return (
-    <li className={className} onClick={onTabClick}>
-      <span className={activeTab === label ? "tab-link" : "tab-link active"}>
-        {title}
-      </span>
-    </li>
+    <div
+      role="button"
+      aria-controls={label}
+      aria-expanded={active}
+      className={className}
+      onMouseEnter={onTabClick}
+    >
+      <span className={active ? "tab-link active" : "tab-link"}>{title}</span>
+    </div>
   );
 };
