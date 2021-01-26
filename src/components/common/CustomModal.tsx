@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { CSSProperties } from "react";
 import Icon from "./icon/Icon";
 
 interface ModalProps {
   handleClose?: () => void;
   show: boolean;
   showCloseBtn?: boolean;
+  style?: CSSProperties;
   children?: React.ReactNode;
 }
 
@@ -15,30 +16,32 @@ export const Modal: React.FC<ModalProps> = ({
   show,
   children,
   showCloseBtn = true,
+  style,
 }) => {
-  // remove scrolling from <body></body> when show is true
-  useEffect(() => {
-    if (show) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-  }, [show]);
-
+  const styles = {
+    ...style,
+    display: show ? "block" : "none",
+  };
   return (
-    <div
-      style={show ? { display: "block" } : { display: "none" }}
-      className="custom-modal"
-    >
-      <button
-        style={showCloseBtn ? { display: "block" } : { display: "none" }}
-        className="custom-modal__btn"
-        type="button"
-        onClick={handleClose}
-      >
-        <Icon icon="close" title="close" fill="rgb(255,255,255)" size={20} />
-      </button>
-      <section className="custom-modal__main">{children}</section>
+    <div style={styles} className="custom-modal" onTouchStart={handleClose}>
+      {showCloseBtn ? (
+        <button
+          style={{ display: "block" }}
+          className="custom-modal__btn"
+          type="button"
+          onClick={handleClose}
+        >
+          <Icon icon="close" title="close" fill="rgb(255,255,255)" size={20} />
+        </button>
+      ) : undefined}
+      {children ? (
+        <section
+          style={show ? { display: "block" } : { display: "none" }}
+          className="custom-modal__main"
+        >
+          {children}
+        </section>
+      ) : undefined}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import MediaQuery from "react-responsive";
 import MiniNavBar from "./MiniNavBar";
 import NavBar from "./NavBar";
-import { SubNavBar } from "./subnav/SubNavBar";
+import MegaMenu from "./MegaMenu";
 
 const Header = () => {
   return (
@@ -11,9 +11,9 @@ const Header = () => {
         <MiniNavBar />
       </MediaQuery>
       <NavBar />
-      {/* <MediaQuery minDeviceWidth={1024}>
-        <SubNavBar />
-      </MediaQuery> */}
+      <MediaQuery minDeviceWidth={1024}>
+        <MegaMenu />
+      </MediaQuery>
     </header>
   );
 };
