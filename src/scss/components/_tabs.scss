@@ -25,7 +25,13 @@
   .tab {
     flex: 1 0 auto;
     position: relative;
-    cursor: pointer;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    @extend .btn;
+    &:focus {
+      box-shadow: none !important;
+    }
     &::after {
       content: "";
       top: 0;
