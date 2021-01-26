@@ -1,11 +1,10 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import Icon from "../../components/common/icon/Icon";
-import Video from "../../assets/video/showcase_video.mp4";
+import Video from "../../assets/video/video.mp4";
 import deliverytruckImage from "../../assets/resources/shipped.svg";
 import favoriteImage from "../../assets/resources/star.svg";
-import Welcome from "../../assets/images/welcomeimg.jpeg";
-import Discount from "../../assets/images/discount_img.jpg";
+import banner from "../../assets/images/bannergif.gif";
 
 const Homepage = () => {
   return (
@@ -23,12 +22,8 @@ const Homepage = () => {
 const TopBanner = () => {
   return (
     <div className="homebanner">
-      {/* <img src={Welcome} alt="favorite" className="welcomeImg" /> */}
-      {/* <div className="welcome-txt_container">
-      <p>Welcome to ANIKELA</p>
-      </div> */}
       <div className="discount-container">
-        <img src={Discount} alt="discount" className="discount_img" />
+        <img src={banner} alt="discount" className="discount_img" />
       </div>
     </div>
   );
