@@ -30,7 +30,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
 
   return (
     <nav className={className} onMouseLeave={closeTabNavigation}>
-      <div className="tab-list">
+      <div role="tablist" className="tab-list">
         {items.map((child: React.ReactElement) => {
           const { label, tabTitle } = child.props;
           return (
@@ -44,7 +44,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
           );
         })}
       </div>
-      <nav className="tab-content__container">
+      <div className="tab-content__container">
         <Modal
           show={true}
           handleClose={closeTabNavigation}
@@ -53,9 +53,10 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
         />
         {items.map((child: React.ReactElement) => {
           let current = child.props.label === active;
-          if (!current) return undefined;
           return (
             <div
+              role="tabpanel"
+              id={child.props.label}
               key={child.props.label}
               className={current ? "tab-content active" : "tab-content"}
               onMouseLeave={closeTabNavigation}
@@ -64,7 +65,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
             </div>
           );
         })}
-      </nav>
+      </div>
     </nav>
   );
 };
@@ -93,6 +94,7 @@ export const Tab: React.FC<TabProps> = (props) => {
   let active: boolean = activeTab === label;
   return (
     <button
+      role="tab"
       aria-controls={label}
       aria-expanded={active}
       className={active ? "tab active" : "tab"}
