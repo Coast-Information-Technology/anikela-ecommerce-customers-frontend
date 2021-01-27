@@ -21,10 +21,10 @@ const NavBar: React.FC = () => {
         </Link>
         <MediaQuery minDeviceWidth={1024}>
           <div className="navbar-nav">
-            <Link to="products/women" className="navbar__link">
+            <Link to="/products/women" className="navbar__link">
               women
             </Link>
-            <Link to="products/men" className="navbar__link">
+            <Link to="/products/men" className="navbar__link">
               men
             </Link>
           </div>

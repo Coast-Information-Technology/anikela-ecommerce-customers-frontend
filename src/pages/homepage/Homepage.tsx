@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Icon from "../../components/common/icon/Icon";
-import Video from "../../assets/video/video.mp4";
+import Video from "../../assets/video/showcase_video.mp4";
 import deliverytruckImage from "../../assets/resources/shipped.svg";
 import favoriteImage from "../../assets/resources/star.svg";
 import banner from "../../assets/images/bannergif.gif";
@@ -57,8 +56,12 @@ const HomeSlogan = () => {
 const PickSecBtn = () => {
   return (
     <div className="btn-selectcat">
-      <button className="btn-woman">SHOP WOMEN</button>
-      <button className="btn-man">SHOP MEN</button>
+      <Link to="/products/women" className="shop_women-link">
+        <button className="btn-woman">SHOP WOMEN</button>
+      </Link>
+      <Link to="/products/men" className="shop_men-link">
+        <button className="btn-man">SHOP MEN</button>
+      </Link>
     </div>
   );
 };
