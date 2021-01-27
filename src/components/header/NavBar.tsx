@@ -9,7 +9,8 @@ import SearchBar, { SearchBarUtil } from "../common/search_bar/SearchBar";
 const NavBar: React.FC = () => {
   const isTabletScreen = useMediaQuery({ query: "(max-width: 767px)" });
   const innerSpaceClass = isTabletScreen ? "flex-grow-1" : "";
-  const noOfItemsInCart: number = 0;
+  const noOfItemsInCart: number = 8;
+  let isCartEmpty = noOfItemsInCart === 0;
   return (
     <nav className="navbar">
       <div className="container-lg">
@@ -58,22 +59,22 @@ const NavBar: React.FC = () => {
           </div>
         </MediaQuery>
 
-        <div className="nav-util position-relative">
+        <div className="nav-util">
           <Link to="shopping-cart" className="position-relative">
             <Icon
               icon="shopping-bag"
-              title="shopping cart"
+              title="your cart"
               className="nav-util__img"
               size={24}
             />
-            {noOfItemsInCart !== 0 ? (
+            {!isCartEmpty ? (
               <span className="cart-notification-badge">
                 {noOfItemsInCart.toString()}
-                <span className="visually-hidden">items in cart</span>
+                <span className="visually-hidden">
+                  {`you have ${noOfItemsInCart} items in cart`}
+                </span>
               </span>
-            ) : (
-              <span className="visually-hidden">you have no items in cart</span>
-            )}
+            ) : undefined}
           </Link>
         </div>
       </div>

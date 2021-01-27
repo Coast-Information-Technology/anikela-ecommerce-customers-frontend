@@ -36,7 +36,12 @@ export const Modal: React.FC<ModalProps> = ({
           type="button"
           onClick={handleClose}
         >
-          <Icon icon="close" title="close" fill="rgb(255,255,255)" size={20} />
+          <Icon
+            icon="close"
+            title="close button"
+            fill="rgb(255,255,255)"
+            size={20}
+          />
         </button>
       ) : undefined}
       {children ? (
