@@ -25,7 +25,13 @@
   .tab {
     flex: 1 0 auto;
     position: relative;
-    cursor: pointer;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    @extend .btn;
+    &:focus {
+      box-shadow: none !important;
+    }
     &::after {
       content: "";
       top: 0;
@@ -74,11 +80,13 @@
     height: 100%;
   }
   .tab-content {
+    visibility: hidden;
+    opacity: 0;
     height: 400px;
     width: 100%;
-    transition: all 0.5s ease;
     background-color: $light;
     position: absolute;
+
     z-index: 1800;
     // to be remeoved style a created content wrapper instead
     display: flex;
@@ -94,6 +102,10 @@
       bottom: 0;
       left: 0;
       background-image: linear-gradient(to left, #88b4e1 30%, #f39fae 80%);
+    }
+    &.active {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

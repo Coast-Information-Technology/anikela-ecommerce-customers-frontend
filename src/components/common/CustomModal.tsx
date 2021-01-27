@@ -23,7 +23,12 @@ export const Modal: React.FC<ModalProps> = ({
     display: show ? "block" : "none",
   };
   return (
-    <div style={styles} className="custom-modal" onTouchStart={handleClose}>
+    <div
+      role="presentation"
+      style={styles}
+      className="custom-modal"
+      onTouchStart={handleClose}
+    >
       {showCloseBtn ? (
         <button
           style={{ display: "block" }}
@@ -31,7 +36,12 @@ export const Modal: React.FC<ModalProps> = ({
           type="button"
           onClick={handleClose}
         >
-          <Icon icon="close" title="close" fill="rgb(255,255,255)" size={20} />
+          <Icon
+            icon="close"
+            title="close button"
+            fill="rgb(255,255,255)"
+            size={20}
+          />
         </button>
       ) : undefined}
       {children ? (

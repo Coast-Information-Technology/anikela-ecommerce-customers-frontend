@@ -30,7 +30,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
 
   return (
     <nav className={className} onMouseLeave={closeTabNavigation}>
-      <ul className="tab-list">
+      <div role="tablist" className="tab-list">
         {items.map((child: React.ReactElement) => {
           const { label, tabTitle } = child.props;
           return (
@@ -43,8 +43,8 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
             />
           );
         })}
-      </ul>
-      <nav className="tab-content__container">
+      </div>
+      <div className="tab-content__container">
         <Modal
           show={true}
           handleClose={closeTabNavigation}
@@ -53,9 +53,10 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
         />
         {items.map((child: React.ReactElement) => {
           let current = child.props.label === active;
-          if (!current) return undefined;
           return (
             <div
+              role="tabpanel"
+              id={child.props.label}
               key={child.props.label}
               className={current ? "tab-content active" : "tab-content"}
               onMouseLeave={closeTabNavigation}
@@ -64,7 +65,7 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({
             </div>
           );
         })}
-      </nav>
+      </div>
     </nav>
   );
 };
@@ -91,20 +92,15 @@ export const Tab: React.FC<TabProps> = (props) => {
     onHover(label);
   };
   let active: boolean = activeTab === label;
-  let className = "tab";
-
-  if (active) {
-    className += " tab active";
-  }
   return (
-    <div
-      role="button"
+    <button
+      role="tab"
       aria-controls={label}
       aria-expanded={active}
-      className={className}
+      className={active ? "tab active" : "tab"}
       onMouseEnter={onTabClick}
     >
       <span className={active ? "tab-link active" : "tab-link"}>{title}</span>
-    </div>
+    </button>
   );
 };
