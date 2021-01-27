@@ -23,7 +23,12 @@ export const Modal: React.FC<ModalProps> = ({
     display: show ? "block" : "none",
   };
   return (
-    <div style={styles} className="custom-modal" onTouchStart={handleClose}>
+    <div
+      role="presentation"
+      style={styles}
+      className="custom-modal"
+      onTouchStart={handleClose}
+    >
       {showCloseBtn ? (
         <button
           style={{ display: "block" }}
