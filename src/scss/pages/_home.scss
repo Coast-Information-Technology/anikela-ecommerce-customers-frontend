@@ -840,15 +840,20 @@
     flex: -100%;
   }
 }
+
+// Beginninf of CTA page css
 .hero_section{
   margin-bottom: 20px;
   position: relative;
   width: 100%;
   height: 75vh;
-  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/ctaMainimg.png);
+  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/jessica-felicio-BzSfM6n_LIE-unsplash.jpg);
   background-size: cover;
   background-attachment: fixed;
-  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  background-position: center;
+  // clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
+  // clip-path: circle(155vh at 50% -80vh);
 }
 .hero_section{
   h1{
@@ -864,6 +869,7 @@
     position: absolute;
     top: 32%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%,-50%);
     color: #fff;
     text-shadow: 0 2px 20px blur #000;
@@ -1008,7 +1014,7 @@ transition: 2s;
 .three{
   grid-column: 3/5;
   grid-row: 3/5;
-  background: url(../../assets/images/high-heels.jpg);
+  background: url(../../assets/images/shoe1.JPG);
   background-size: auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -1037,7 +1043,10 @@ font-size: 1.2rem;
 .four{
   grid-column: 5/5;
   grid-row: 3/5;
-background: #DB6B60;
+  background: url(../../assets/images/IMG-0259.JPG);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .purse-content{
   padding: 70px 0;
@@ -1047,7 +1056,7 @@ background: #DB6B60;
   p{
     text-align: center;
     font-size: 0.6rem;
-    color:  $light;
+    color:  $dark;
     font-weight: bolder;
     text-shadow: 0 2px 20px blur #000;
     text-transform: uppercase;
@@ -1055,24 +1064,16 @@ background: #DB6B60;
   span{
 font-weight: bolder;
 font-size: 1.2rem;
-    color: $light;
+    color: $dark;
     text-shadow: 0 2px 20px blur #000;
   
   }
-}
-.purse-section{
-  background: url(../../assets/images/laura-chouette-N_N-W32xHMc-unsplash.jpg);
-  background-size: auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  margin-top: -40px;
 }
 .accessories-container{
   position: relative;
   width: 100%;
   height: 400px;
-  background: linear-gradient(rgba(236, 217, 227, 0.3), rgba(215, 229, 243, 0.8)), url(../../assets/images/vinicius-amnx-amano-k2yixQS_YH0-unsplash.png);
+  background: linear-gradient(rgba(236, 217, 227, 0.3), rgba(215, 229, 243, 0.8)), url(../../assets/images/alex-sorto--fowxtAtWW8-unsplash.jpg);
   background-size: cover;
   background-position: center;
   margin-bottom: 50px;
@@ -1130,7 +1131,7 @@ font-size: 1.2rem;
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 50px;
   display: grid;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 .accContent-container div{
@@ -1138,29 +1139,31 @@ font-size: 1.2rem;
   height: 300px;
 }
 .edit-pack{
-  background: url(../../assets/images/IMG-0364.jpg);
+  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/IMG-0364.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .edit-pack{
   p{
-  margin-top: 120%;
+    margin-top: 100%;
+  color: $light;
   }
 }
 .modern-looks{
-  background: url(../../assets/images/IMG-0377.PNG);
+  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/IMG-0377.PNG);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .modern-looks{
   p{
-  margin-top: 120%;
+    margin-top: 100%;
+    color: $light;
   }
 }
 .shop-sale{
-  background: linear-gradient(rgba(0,0,0, 0.8), rgba(0,0,0, 0.8)),url(../../assets/images/tyler-nix-kURQO4OjOa8-unsplash.jpg);
+  background: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/1611857880130_models-pose-backstage-ahead-of-the-christian-wijnants-news-photo-1591024203.JPG);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1169,29 +1172,32 @@ font-size: 1.2rem;
   span{
     color: $light;
     font-size: 1.5rem;
+    display: none;
   }
   p{
-  margin-top: 105%;
+  margin-top: 100%;
+  color: $light;
   }
 }
 .social-access{
-  background: url(../../assets/images/insta.png);
+  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/insta.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .social-access{
   p{
-  margin-top: 120%;
+    margin-top: 100%;
+    color: $light;
   }
 }
 .newsletter-container{
   position: relative;
   width: 100%;
   height: 400px;
-  background: linear-gradient(rgba(16, 16, 60, 0.7), rgba(16, 16, 60, 0.7)), url(../../assets/images/matheus-ferrero-4QotHf68gSg-unsplash.jpg);
+  background: linear-gradient(rgba(16, 16, 60, 0.7), rgba(16, 16, 60, 0.7)), url(../../assets/images/smile-1485850_1920.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: 0 -100px;
   margin-bottom: 50px;
 }
 .newsletter-content{
@@ -1238,4 +1244,1071 @@ font-size: 1.2rem;
   margin: 1rem 0;
   padding: 0.4rem 0.4rem;
   font-size: 1rem;
+}
+
+// media query CTA
+@media (max-width: 768px) {
+  .hero_section{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/jessica-felicio-BzSfM6n_LIE-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    // clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    // clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
+    clip-path: circle(155vh at 50% -90vh);
+  }
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 300;
+    line-height: 1.5;
+    color: $light;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid #F39FAE;
+    padding: 0.550rem 0.95rem;
+    font-size: 0.70rem;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  
+  .section-content{
+    margin-top: -20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .one, .two, .three, .four{
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .two{
+   margin-left: -10px;
+   margin-top: -10px;
+  }
+  .makeup_dets{
+    padding: 70px 0;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: -100px;
+  }
+  .three{
+    grid-column: auto;
+    grid-row: 3/5;
+  }
+  .four{
+    grid-column:auto;
+    grid-row: 5/7;
+  }
+  .access-container{
+    p{
+      font-size: 2rem;
+    }
+  }
+  .accContent-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    max-width: 100%;
+  }
+  .edit-pack, .modern-looks, .shop-sale, .social-access{
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .edit-pack{
+    background: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.8)),url(../../assets/images/IMG-0364.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .edit-pack{
+    p{
+      margin-top: 30%;
+      color: $light;
+      font-size: 1.5rem;
+    }
+  }
+  .modern-looks{
+    background: linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.8)), url(../../assets/images/IMG-0377.PNG);
+    background-position:center;
+    background-repeat: no-repeat;
+  }
+  .modern-looks{
+    p{
+      margin-top: 30%;
+      color: $light;
+      font-size: 1.5rem;
+    }
+  }
+  .shop-sale{
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)),url(../../assets/images/1611857880130_models-pose-backstage-ahead-of-the-christian-wijnants-news-photo-1591024203.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .shop-sale{
+    span{
+      color: $light;
+      font-size: 1.5rem;
+      display: none;
+    }
+    p{
+      margin-top: 30%;
+      color: $light;
+      font-size: 1.5rem;
+    }
+  }
+  .social-access{
+    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)), url(../../assets/images/insta.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .social-access{
+    p{
+      margin-top: 30%;
+      color: $light;
+      font-size: 1.5rem;
+    }
+  }
+  .newsletter-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(16, 16, 60, 0.7), rgba(16, 16, 60, 0.7)), url(../../assets/images/smile-1485850_1920.jpg);
+    background-size: cover;
+    background-position: 0 -100px;
+    margin-bottom: 20px;
+  }
+  
+}
+@media only screen and (device-width: 280px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 0.90rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .makeup_dets {
+    align-content: center;
+    flex: 55%;
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -15px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 320px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .makeup_dets {
+    align-content: center;
+    flex: 55%;
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -15px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+    margin-bottom: 50px;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 360px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .makeup_dets {
+    align-content: center;
+    flex: 55%;
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -50px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 375px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .makeup_dets {
+    align-content: center;
+    flex: 55%;
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -50px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+
+@media only screen and (device-width: 411px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -30px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 414px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -30px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 540px) {
+  .hero_section{
+    h1{
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    p{
+      position: absolute;
+      top: 34%;
+      left: 50%;
+      font-size: 0.8rem;
+      font-weight: 500;
+    
+    }
+    button{
+    position: absolute;
+    top: 44%;
+    left: 50%;
+  }
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -30px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
 }
