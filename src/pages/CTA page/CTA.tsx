@@ -57,7 +57,6 @@ const ContentSection = () => {
           <p>shop by</p>
           <span>Purse</span>
         </div>
-        <div className="purse-section"></div>
       </div>
     </div>
   );
