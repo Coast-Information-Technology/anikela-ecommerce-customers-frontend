@@ -19,7 +19,9 @@ const menuCategory = [
 ];
 
 const SideNavigationBar: React.FC = () => {
-  const isOpen = useSelector((state: RootState) => state.sidenav.isSideNavOpen);
+  const isNavigationOpen = useSelector(
+    (state: RootState) => state.sidenav.isSideNavOpen
+  );
   const dispatch = useDispatch();
 
   const closeNavigationBar = () => {
@@ -27,22 +29,22 @@ const SideNavigationBar: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isOpen) {
+    if (isNavigationOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-  }, [isOpen]);
+  }, [isNavigationOpen]);
 
   const componentRef = useRef<HTMLDivElement>(null);
   useOnClickOutside(componentRef, closeNavigationBar);
 
   return (
     <>
-      <Modal handleClose={closeNavigationBar} show={isOpen} />
+      <Modal handleClose={closeNavigationBar} show={isNavigationOpen} />
       <div
         role="dialog"
-        className={isOpen ? "side-nav open" : "side-nav"}
+        className={isNavigationOpen ? "side-nav open" : "side-nav"}
         ref={componentRef}
       >
         <SideNavigationMenu />
