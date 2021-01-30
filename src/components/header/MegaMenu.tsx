@@ -1,9 +1,11 @@
 import React from "react";
-import { TabItem, TabNavigation } from "../common/TabNavigation";
+import { MenuNavigation } from "../common/MenuNavigation";
+import { TabItem } from "../common/TabNavigation";
 
+// TODO this component will soon be rendered obsolete
 const MegaMenu: React.FC = () => {
   return (
-    <TabNavigation className="mega-menu">
+    <MenuNavigation>
       <TabItem label="newIn" tabTitle="New In">
         New In
       </TabItem>
@@ -31,7 +33,7 @@ const MegaMenu: React.FC = () => {
       <TabItem label="collections" tabTitle="Collections">
         Collections
       </TabItem>
-    </TabNavigation>
+    </MenuNavigation>
   );
 };
 
