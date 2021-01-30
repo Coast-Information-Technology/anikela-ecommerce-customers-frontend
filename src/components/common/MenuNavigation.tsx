@@ -14,17 +14,6 @@ navigations with tablike functionality
 TODO This should be fecthed from state 
 an array of categories with their corresponding content
 */
-const menuCategory = [
-  "New In",
-  "Clothing",
-  "Shoes",
-  "Accesories",
-  "Gifts",
-  "Active wear",
-  "Cosmetics",
-  "Brands ",
-  "Collections ",
-];
 
 export class MenuNavigation extends TabNavigation {
   elements = (<>{this.props.children}</>);
