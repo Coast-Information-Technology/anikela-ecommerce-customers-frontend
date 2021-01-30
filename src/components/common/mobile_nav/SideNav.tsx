@@ -1,16 +1,28 @@
-import React, { useEffect, useRef } from "react";
-import Icon from "../icon/Icon";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/rootReducer";
 import { closeSideNav } from "../../../state/sideNav/sideNavAction";
 import { Modal } from "../CustomModal";
 import useOnClickOutside from "../../../hooks";
+import { Link } from "react-router-dom";
 
-const SideNav: React.FC = () => {
+const menuCategory = [
+  "New In",
+  "Clothing",
+  "Shoes",
+  "Accesories",
+  "Gifts",
+  "Active wear",
+  "Cosmetics",
+  "Brands ",
+  "Collections ",
+];
+
+const SideNavigationBar: React.FC = () => {
   const isOpen = useSelector((state: RootState) => state.sidenav.isSideNavOpen);
   const dispatch = useDispatch();
 
-  const closeNavigation = () => {
+  const closeNavigationBar = () => {
     dispatch(closeSideNav());
   };
 
@@ -23,26 +35,83 @@ const SideNav: React.FC = () => {
   }, [isOpen]);
 
   const componentRef = useRef<HTMLDivElement>(null);
-  useOnClickOutside(componentRef, closeNavigation);
+  useOnClickOutside(componentRef, closeNavigationBar);
 
   return (
-    <div>
-      <Modal handleClose={closeNavigation} show={isOpen} />
-      <nav
+    <>
+      <Modal handleClose={closeNavigationBar} show={isOpen} />
+      <div
         role="dialog"
-        aria-label="Navigation Menu"
         className={isOpen ? "side-nav open" : "side-nav"}
         ref={componentRef}
       >
-        <div className="side-nav__content">
-          <h6>Side Nav </h6>
-          <button className="btn" onClick={closeNavigation}>
-            <Icon icon="close" title="close" size={24} fill="rgb(0,0,0)" />
-          </button>
-        </div>
-      </nav>
-    </div>
+        <SideNavigationMenu />
+      </div>
+    </>
   );
 };
 
-export default SideNav;
+export const SideNavigationMenu: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [currentMenuId, setcurrentMenuId] = useState(" ");
+  const dispatch = useDispatch();
+
+  return (
+    <nav className="sideNav-menu" aria-label="Navigation Menu">
+      {menuCategory.map((title: string, index) => {
+        return (
+          <div
+            key={index}
+            className="side-nav__item hasMenu"
+            onClick={() => {
+              setcurrentMenuId(title);
+              setMenuOpen(true);
+            }}
+          >
+            <span>{title}</span>
+          </div>
+        );
+      })}
+      <div style={{ margin: "0.8rem 0" }}></div>
+      <Link to="/" className="side-nav__item">
+        location
+      </Link>
+      <Link to="/" className="side-nav__item">
+        Contact
+      </Link>
+      <Link to="/" className="side-nav__item">
+        Sign In
+      </Link>
+      <div style={{ margin: "0.8rem 0" }}></div>
+      <div
+        className={
+          menuOpen ? "sideNav-menu__aside open" : "sideNav-menu__aside"
+        }
+      >
+        <div className="top">
+          <span
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >{`<- Go back`}</span>
+        </div>
+        {menuCategory.map((title: string, index) => {
+          let isActive = title === currentMenuId;
+          return isActive ? (
+            <ul
+              key={index}
+              onClick={() => {
+                dispatch(closeSideNav());
+              }}
+              className={isActive ? "item-menu active" : "item-menu"}
+            >
+              {title}
+            </ul>
+          ) : undefined;
+        })}
+      </div>
+    </nav>
+  );
+};
+
+export default SideNavigationBar;
