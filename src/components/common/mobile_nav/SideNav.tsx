@@ -5,6 +5,7 @@ import { closeSideNav } from "../../../state/sideNav/sideNavAction";
 import { Modal } from "../CustomModal";
 import useOnClickOutside from "../../../hooks";
 import { Link } from "react-router-dom";
+import Icon from "../icon/Icon";
 
 const menuCategory = [
   "New In",
@@ -95,7 +96,14 @@ export const SideNavigationMenu: React.FC = () => {
             onClick={() => {
               setMenuOpen(false);
             }}
-          >{`<- Go back`}</span>
+          >
+            <Icon
+              icon="arrow-right"
+              title="Back"
+              size={22}
+              fill="currentColor"
+            />
+          </span>
         </div>
         {menuCategory.map((title: string, index) => {
           let isActive = title === currentMenuId;
