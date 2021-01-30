@@ -15,17 +15,86 @@
   transform: translateX(0);
 }
 
-.side-nav__toggle {
-}
-.side-nav__content {
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  padding: 4rem 4rem;
-}
-
 @media (max-width: 425px) {
   .side-nav {
     width: 75%;
+  }
+}
+
+.side-nav__toggle {
+}
+.sideNav-menu {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  background: #fbfbfb;
+  z-index: 1;
+}
+
+.side-nav__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-weight: 400;
+  padding: 1rem 1.2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: rgb(107, 107, 107);
+  cursor: pointer;
+  &.hasMenu {
+    border-bottom: 1px solid rgba($color: $dark, $alpha: 0.1);
+    color: $dark;
+    font-weight: 600;
+  }
+  &.hasMenu::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%) rotateZ(45deg);
+    position: absolute;
+    border-top: 0.1rem solid rgba($color: $dark, $alpha: 0.3);
+    border-right: 0.1rem solid rgba($color: $dark, $alpha: 0.3);
+  }
+}
+
+.sideNav-menu__aside {
+  width: 100%;
+  height: 100%;
+  background: #fbfbfb;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  transition: transform 0.2s ease;
+  transform: translateX(100%);
+  .top {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+  }
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.item-menu {
+  display: none;
+  opacity: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center;
+  // TODO to be removed
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  // ------------------
+  &.active {
+    display: block;
+    opacity: 1;
   }
 }
