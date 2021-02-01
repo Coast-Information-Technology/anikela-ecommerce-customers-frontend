@@ -3,7 +3,7 @@ import useOnClickOutside from "../../hooks";
 
 interface DropdownProps {
   value: string;
-  options: [];
+  options: string[];
   placeholder: string;
   onChange: (selectedValue: string) => void;
 }
@@ -28,15 +28,19 @@ const Dropdown: React.FC<DropdownProps> = ({
   useOnClickOutside(node, handleClickOutside);
 
   return (
-    <div ref={node} className="dropdown">
-      <button className="dropdown-toggler" onClick={(e) => setOpen(!open)}>
+    <div ref={node} className="custom-dropdown">
+      <button
+        className="custom-dropdown-toggler"
+        onClick={(e) => setOpen(!open)}
+      >
         {value || placeholder}
       </button>
       {open && (
-        <ul className="dropdown-menu">
-          {options.map((opt) => (
+        <ul className="custom-dropdown-menu">
+          {options.map((opt, index) => (
             <li
-              className="dropdown-menu-item"
+              key={index}
+              className="custom-dropdown-menu-item"
               onClick={(e) => handleChange(opt)}
             >
               {opt}
