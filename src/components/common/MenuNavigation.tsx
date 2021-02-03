@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "./CustomModal";
-import { Tab, TabNavigation } from "./TabNavigation";
+import { Tab } from "./TabNavigation";
 
 /*
 TODO Revise Tab Component
@@ -15,60 +15,69 @@ TODO This should be fecthed from state
 an array of categories with their corresponding content
 */
 
-export class MenuNavigation extends TabNavigation {
-  elements = (<>{this.props.children}</>);
-  items = this.elements.props.children;
+interface MenuNavigationProps {}
+export const MenuNavigation: React.FC<MenuNavigationProps> = (props) => {
+  const [activelabel, setActiveLabel] = useState(" ");
+  const [open, setOpen] = useState(false);
+  const elements = <>{props.children}</>;
+  const items = elements.props.children;
+  let menuTimer: any;
 
-  onTabClick = (label: string) => {
-    this.setActiveTab(label);
-    this.setOpen(true);
+  const onTabHover = (label: string) => {
+    menuTimer = setTimeout(() => {
+      setActiveLabel(label);
+      setOpen(true);
+    }, 500);
   };
 
-  closeMenuNav = () => {
-    this.setActiveTab(" ");
-    this.setOpen(false);
+  const closeMenuNav = () => {
+    setActiveLabel(" ");
+    setOpen(false);
   };
-  render() {
-    const { open, currentTabLabel } = this.state;
-    return (
-      <nav className={"mega-menu"} onMouseLeave={this.closeMenuNav}>
-        <div role="tablist" className="tab-list">
-          {this.items.map((child: React.ReactElement) => {
-            const { label, tabTitle } = child.props;
-            return (
-              <Tab
-                activeTab={currentTabLabel}
-                title={tabTitle}
-                label={label}
-                key={label}
-                onHover={this.onTabClick}
-              />
-            );
-          })}
-        </div>
-        <div className="tab-content__container">
-          <Modal
-            show={true}
-            handleClose={this.closeMenuNav}
-            showCloseBtn={false}
-            style={open ? { height: "100vh" } : { height: "0" }}
-          />
-          {this.items.map((child: React.ReactElement) => {
-            let current = child.props.label === currentTabLabel;
-            return (
-              <div
-                role="tabpanel"
-                id={child.props.label}
-                key={child.props.label}
-                className={current ? "tab-content active" : "tab-content"}
-                onMouseLeave={this.closeMenuNav}
-              >
-                {child.props.children}
-              </div>
-            );
-          })}
-        </div>
-      </nav>
-    );
-  }
-}
+
+  const stopNavOpen = () => {
+    clearTimeout(menuTimer);
+  };
+
+  return (
+    <nav className={"mega-menu"} onMouseLeave={closeMenuNav}>
+      <div role="tablist" className="tab-list">
+        {items.map((child: React.ReactElement) => {
+          const { label, tabTitle } = child.props;
+          return (
+            <Tab
+              activeTab={activelabel}
+              title={tabTitle}
+              label={label}
+              key={label}
+              onHover={onTabHover}
+              onLeave={stopNavOpen}
+            />
+          );
+        })}
+      </div>
+      <div className="tab-content__container">
+        <Modal
+          show={true}
+          handleClose={closeMenuNav}
+          showCloseBtn={false}
+          style={open ? { height: "100vh" } : { height: "0" }}
+        />
+        {items.map((child: React.ReactElement) => {
+          let current = child.props.label === activelabel;
+          return (
+            <div
+              role="tabpanel"
+              id={child.props.label}
+              key={child.props.label}
+              className={current ? "tab-content active" : "tab-content"}
+              onMouseLeave={closeMenuNav}
+            >
+              {child.props.children}
+            </div>
+          );
+        })}
+      </div>
+    </nav>
+  );
+};
