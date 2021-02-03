@@ -7,6 +7,7 @@
   padding: 0.2rem 0.65rem;
   border: none;
   background-color: transparent;
+  box-shadow: 0 0 4 3 rgba(0, 0, 0, 0.2);
   color: $primary;
   border-left: 1px solid rgb(114, 114, 114);
   border-right: 1px solid rgb(114, 114, 114);
@@ -19,9 +20,9 @@
 .custom-dropdown-menu {
   padding: 0 !important;
   position: absolute;
-  z-index: 2;
-  top: 100%;
-  left: 0;
+  z-index: 8;
+  top: 0;
+  left: 100%;
   background-color: white;
 }
 
@@ -31,6 +32,7 @@
   color: $accent;
   font-weight: 600;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .custom-dropdown-menu-item:active {
