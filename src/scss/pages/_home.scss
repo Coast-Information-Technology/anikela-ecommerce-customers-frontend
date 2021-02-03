@@ -847,39 +847,50 @@
   position: relative;
   width: 100%;
   height: 75vh;
-  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/jessica-felicio-BzSfM6n_LIE-unsplash.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  overflow: hidden;
   // clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
   clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
   // clip-path: circle(155vh at 50% -80vh);
 }
-.hero_section{
-  h1{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.hero_section .slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500%;
+  height: 100%;
+  float: left;
+  clip-path: circle(150% at 0 50%);
+  animation: animate 20s linear infinite;
+}
+.hero_section .slider .slide{
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.hero_section .slider .caption{
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%,-50%);
+box-sizing: border-box;
+}
+.hero_section .slider .caption{
+    h1{
+      text-align: center;
     color: #fff;
     text-shadow: 0 2px 20px blur #000;
     text-transform: uppercase;
   }
   p{
-    position: absolute;
-    top: 32%;
-    left: 50%;
     text-align: center;
-    transform: translate(-50%,-50%);
     color: #fff;
     text-shadow: 0 2px 20px blur #000;
   
   }
   button{
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+    margin-right: 25%;
+    margin-left:25%;
   font-weight: 300;
   line-height: 1.5;
   color: $light;
@@ -903,6 +914,64 @@ background-color: #F39FAE;
 transition: 2s;
 }
 }
+.hero_section .slider .slide.slide1{
+  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/jessica-felicio-BzSfM6n_LIE-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+} 
+.hero_section .slider .slide.slide2{
+  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/autumn-goodman-vTL_qy03D1I-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero_section .slider .slide.slide3{
+  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/evan-dvorkin-f9Gm5q5CZ0o-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero_section .slider .slide.slide4{
+  background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/cristian-newman--Iq99thoes4-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+// main section KeyFrames
+@keyframes animate{
+  0%{
+      left: 0;
+  }
+  20%{
+      left: 0;
+  }
+  25%{
+      left: -100%;
+  }
+  45%{
+      left: -100%;
+  }
+  50%{
+      left: -200%;
+  }
+  70%{
+      left: -200%;
+  }
+  75%{
+      left: -300%;
+  }
+  95%{
+      left: -300%;
+  }
+  95%{
+      left: -300%;
+  }
+  100%{
+      left: -400%;
+  }
+}
+
 .section-content{
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: minmax(150px,auto);
@@ -968,7 +1037,7 @@ font-size: 1.2rem;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: -200px;
+  margin-right: -140px;
 }
 .makeup_dets{
   p{
@@ -1259,51 +1328,47 @@ font-size: 1.2rem;
     // clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
     clip-path: circle(155vh at 50% -90vh);
   }
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 32%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-weight: 300;
-    line-height: 1.5;
-    color: $light;
+      font-size: 1.50rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
     text-transform: uppercase;
+  }
+  p{
+    font-size: 1rem;
     text-align: center;
-    font-weight: 500;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 2px solid #F39FAE;
-    padding: 0.550rem 0.95rem;
-    font-size: 0.70rem;
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
-  }
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
   
-  button:hover{
+  }
+  button{
+    margin-right: 25%;
+    margin-left:25%;
+  font-weight: 300;
+  line-height: 1.5;
   color: $light;
-  background-color: #F39FAE;
-  transition: 2s;
-  }
-  }
-  
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .section-content{
     margin-top: -20px;
     grid-template-columns: 1fr;
@@ -1410,33 +1475,52 @@ font-size: 1.2rem;
     background: linear-gradient(rgba(16, 16, 60, 0.7), rgba(16, 16, 60, 0.7)), url(../../assets/images/smile-1485850_1920.jpg);
     background-size: cover;
     background-position: 0 -100px;
-    margin-bottom: 20px;
+    margin-bottom: 35%;
   }
   
 }
 @media only screen and (device-width: 280px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 0.90rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 0.65rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 5%;
+    margin-left:5%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup_container{
     display: flex;
     flex-wrap: wrap;
@@ -1543,28 +1627,47 @@ font-size: 1.2rem;
   
 }
 @media only screen and (device-width: 320px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.10rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 0.85rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 10%;
+    margin-left:10%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup_container{
     display: flex;
     flex-wrap: wrap;
@@ -1671,28 +1774,47 @@ font-size: 1.2rem;
   
 }
 @media only screen and (device-width: 360px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.20rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 0.85rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 15%;
+    margin-left:15%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup_container{
     display: flex;
     flex-wrap: wrap;
@@ -1763,6 +1885,160 @@ font-size: 1.2rem;
   }
   .newsletter-container{
     background-repeat: no-repeat;
+      margin-bottom: 15%;
+  }
+  .newsletter-content{
+    p{
+      font-size: 1.2rem;
+      color: $light;
+      text-align: center;
+    }
+    span{
+      font-size: 1.2rem;
+      color: #E999A9;
+    }
+  }
+  .inputbox_container{
+    button{
+      width: 100px;
+      outline: none;
+      display: block;
+      padding:0;
+      font-weight: 500;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: $dark;
+      color: #8BB0C7;
+      cursor: pointer;
+      height: 50px;
+      margin-top: 15px;
+    }
+  }
+  .search_inputbox{
+    width: 200px;
+    height: 50px;
+    display: block;
+    border: 1px solid #ced4da;
+    margin: 1rem 0;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+}
+@media only screen and (device-width: 384px) {
+  .hero_section .slider .caption{
+    h1{
+      font-size: 1.50rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
+  }
+  button{
+    margin-right: 25%;
+    margin-left:25%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
+  .makeup_container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .makeup_dets {
+    align-content: center;
+    flex: 55%;
+  }
+  .makeup-img {
+    background: url(../../assets/images/makeup_mini.JPG);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: 45%;
+  }
+  .makeup_dets{
+    margin-right: -50px;
+  }
+  .makeup_dets{
+    p{
+      text-align: center;
+      font-size: 0.6rem;
+      color: #000;
+      font-weight: bolder;
+      text-shadow: 0 2px 20px blur #000;
+      text-transform: uppercase;
+    }
+    span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+      color: #000;
+      text-shadow: 0 2px 20px blur #000;
+    
+    }
+    button{
+      margin-top: 20px;
+    font-size: 0.70rem;
+  }
+  
+  button:hover{
+  color: $light;
+  background-color: #F39FAE;
+  transition: 2s;
+  }
+  }
+  .accessories-content{
+    margin-left: 20px;
+    padding-top: 100px;
+  }
+  .accessories-content{
+    .lead{
+      font-family: Afrah;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.55rem;
+      font-weight: 500;
+    }
+    button{    
+      margin-top: 10px;
+      font-size: 0.80rem;
+    }
+  }
+  .access-container{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .newsletter-container{
+    background-repeat: no-repeat;
+      margin-bottom: 15%;
   }
   .newsletter-content{
     p{
@@ -1804,28 +2080,47 @@ font-size: 1.2rem;
   
 }
 @media only screen and (device-width: 375px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.20rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 0.85rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 15%;
+    margin-left:15%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup_container{
     display: flex;
     flex-wrap: wrap;
@@ -1896,6 +2191,7 @@ font-size: 1.2rem;
   }
   .newsletter-container{
     background-repeat: no-repeat;
+    margin-bottom: 15%;
   }
   .newsletter-content{
     p{
@@ -1936,30 +2232,48 @@ font-size: 1.2rem;
   }
   
 }
-
 @media only screen and (device-width: 411px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.40rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 0.95rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 19%;
+    margin-left:19%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup-img {
     background: url(../../assets/images/makeup_mini.JPG);
     background-size: auto;
@@ -2059,32 +2373,54 @@ font-size: 1.2rem;
     margin: 1rem 0;
     padding: 10px;
     font-size: 1rem;
+  }
+  .newsletter-container{
+    margin-bottom: 10%;
   }
   
 }
 @media only screen and (device-width: 414px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.50rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 19%;
+    margin-left:19%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup-img {
     background: url(../../assets/images/makeup_mini.JPG);
     background-size: auto;
@@ -2147,6 +2483,7 @@ font-size: 1.2rem;
   }
   .newsletter-container{
     background-repeat: no-repeat;
+    margin-bottom: 15%;
   }
   .newsletter-content{
     p{
@@ -2188,28 +2525,47 @@ font-size: 1.2rem;
   
 }
 @media only screen and (device-width: 540px) {
-  .hero_section{
+  .hero_section .slider .caption{
     h1{
-      position: absolute;
-      top: 25%;
-      left: 50%;
-      font-size: 1.25rem;
-      font-weight: bold;
-    }
-    p{
-      position: absolute;
-      top: 34%;
-      left: 50%;
-      font-size: 0.8rem;
-      font-weight: 500;
-    
-    }
-    button{
-    position: absolute;
-    top: 44%;
-    left: 50%;
+      font-size: 1.50rem;
+      text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+    text-transform: uppercase;
   }
+  p{
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 20px blur #000;
+  
   }
+  button{
+    margin-right: 25%;
+    margin-left:25%;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $light;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 2px solid #F39FAE;
+  padding: 0.575rem 0.95rem;
+  font-size: 0.80rem;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+button:hover{
+color: $light;
+background-color: #F39FAE;
+transition: 2s;
+}
+}
   .makeup-img {
     background: url(../../assets/images/makeup_mini.JPG);
     background-size: auto;
@@ -2272,6 +2628,7 @@ font-size: 1.2rem;
   }
   .newsletter-container{
     background-repeat: no-repeat;
+    margin-bottom: 15%;
   }
   .newsletter-content{
     p{
@@ -2310,5 +2667,4 @@ font-size: 1.2rem;
     padding: 10px;
     font-size: 1rem;
   }
-  
 }

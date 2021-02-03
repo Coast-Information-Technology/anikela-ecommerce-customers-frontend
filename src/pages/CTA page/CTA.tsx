@@ -7,7 +7,7 @@ import MegaMenu from "../../components/header/MegaMenu";
 const CTApage = () => {
   return (
     <div>
-         <MediaQuery minDeviceWidth={1024}>
+      <MediaQuery minDeviceWidth={1024}>
         <MegaMenu />
       </MediaQuery>
       <MainSection />
@@ -21,10 +21,49 @@ const CTApage = () => {
 
 const MainSection = () => {
   return (
+    // <div className="hero_section">
+    // <h1>Shop By Designer</h1>
+    // <p>a passion for fashion. say it with style</p>
+    // <button className="hero_discover-btn">Discover Now</button>
+    // </div>
     <div className="hero_section">
-      <h1>Shop By Designer</h1>
-      <p>a passion for fashion. say it with style</p>
-      <button className="hero_discover-btn">Discover Now</button>
+      <div className="slider">
+        <div className="slide slide1">
+        <div className="caption">
+          <h1>Shop By Designer</h1>
+          <p>a passion for fashion. say it with style</p>
+          <button className="hero_discover-btn">Discover Now</button>
+          </div>
+        </div>
+        <div className="slide slide2">
+          <div className="caption">
+          <h1>Shop By Designer</h1>
+          <p>a passion for fashion. say it with style</p>
+          <button className="hero_discover-btn">Discover Now</button>
+          </div>
+        </div>
+        <div className="slide slide3">
+        <div className="caption">
+          <h1>Shop By Designer</h1>
+          <p>a passion for fashion. say it with style</p>
+          <button className="hero_discover-btn">Discover Now</button>
+          </div>
+        </div>
+        <div className="slide slide4 ">
+        <div className="caption">
+          <h1>Shop By Designer</h1>
+          <p>a passion for fashion. say it with style</p>
+          <button className="hero_discover-btn">Discover Now</button>
+          </div>
+        </div>
+        <div className="slide slide1">
+        <div className="caption">
+          <h1>Shop By Designer</h1>
+          <p>a passion for fashion. say it with style</p>
+          <button className="hero_discover-btn">Discover Now</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -69,8 +108,8 @@ const AccessoriesSection = () => {
         <br />
         <span className="lead">Accessories for Her</span>
         <p>
-          Spice up your specialone style with accessories from brands that don't
-          fail <br />
+          Spice up your special one style with accessories from brands that
+          don't fail <br />
           to accentuate beauty
         </p>
         <button className="hero_discover-btn">Shop Now</button>
@@ -107,21 +146,23 @@ const SignUp_Newsletter = () => {
     <div className="newsletter-container">
       <div className="newsletter-content">
         <p className="hero_lead">
-          Sign up and get <span className="percentage_lead">30%</span> discount on <br/>next order
+          Sign up and get <span className="percentage_lead">30%</span> discount
+          on <br />
+          next order
         </p>
         <div className="inputbox_container">
-        <label htmlFor={"subscribe"} className="visually-hidden">
-          Enter your email address
-        </label>
-        <input
-          id="subscribe"
-          type="email"
-          className="search_inputbox"
-          placeholder="Enter your email......"
-        />
-        <button type="submit" className="">
-          subscribe
-        </button>
+          <label htmlFor={"subscribe"} className="visually-hidden">
+            Enter your email address
+          </label>
+          <input
+            id="subscribe"
+            type="email"
+            className="search_inputbox"
+            placeholder="Enter your email......"
+          />
+          <button type="submit" className="">
+            subscribe
+          </button>
         </div>
       </div>
     </div>
