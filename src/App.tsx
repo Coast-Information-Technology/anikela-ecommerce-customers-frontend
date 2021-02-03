@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Layout from "./components/layout/Layout";
 import Homepage from "./pages/homepage/Homepage"
 import CTA from "./pages/CTA page/CTA"
+// import male_cta from "./pages/CTA page/male_cta"
 
 function App() {
   return (
