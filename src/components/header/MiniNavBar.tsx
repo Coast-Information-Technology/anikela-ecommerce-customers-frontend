@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { ReactText, useState } from "react";
 import Dropdown from "../common/Dropdown";
 
 const MiniNavBar: React.FC = () => {
-  const options = ["NGN N", "EU ", "UK P"];
+  const options: ReactText[] = [`NGN ₦`, `EU €`, `UK £`];
   const [location, setLocation] = useState(options[0]);
   return (
     <nav className="mini-navbar bg-dark">

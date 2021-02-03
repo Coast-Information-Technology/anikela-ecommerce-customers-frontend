@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, ReactText } from "react";
 import useOnClickOutside from "../../hooks";
 
 interface DropdownProps {
   value: string;
-  options: string[];
-  placeholder: string;
-  onChange: (selectedValue: string) => void;
+  options: ReactText[];
+  placeholder: ReactText;
+  onChange: (selectedValue: ReactText) => void;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
@@ -21,7 +21,7 @@ const Dropdown: React.FC<DropdownProps> = ({
     setOpen(false);
   };
 
-  const handleChange = (selectedValue: string) => {
+  const handleChange = (selectedValue: ReactText) => {
     onChange(selectedValue);
     setOpen(false);
   };
