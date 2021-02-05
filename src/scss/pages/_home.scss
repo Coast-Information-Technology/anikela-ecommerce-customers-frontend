@@ -848,8 +848,8 @@
   width: 100%;
   height: 75vh;
   overflow: hidden;
-  // clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
-  clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  // clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
   // clip-path: circle(155vh at 50% -80vh);
 }
 .hero_section .slider{
@@ -980,16 +980,19 @@ transition: 2s;
   min-width: 100%;
   margin: 0 auto;
   margin-bottom: 50px;
+
 }
 .section-content div{
   padding: 10px;
 }
 .one{
-  grid-column: 1/3;
+  grid-column: 1/4;
   grid-row: 1/5;
   background: url(../../assets/images/female_clothes.WEBP);
   background-size: cover;
   background-position: center;
+  margin-right: 20%;
+  margin-left: 20px;
 }
 .clothing-content{
   margin-top: 70%;
@@ -1015,7 +1018,8 @@ font-size: 1.2rem;
   grid-row: 1/3;
  background: #C49075;
  height: 300px;
- margin-left: 10px;
+ margin-left: 18%;
+ margin-right: 20px;
 }
 .makeup_container{
   display: flex;
@@ -1037,7 +1041,7 @@ font-size: 1.2rem;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: -140px;
+  margin-right: -50px;
 }
 .makeup_dets{
   p{
@@ -1086,6 +1090,7 @@ transition: 2s;
   background: url(../../assets/images/shoe1.JPG);
   background-size: auto;
   background-position: center;
+  margin-left: 25%;
   background-repeat: no-repeat;
 }
 .shoes-content{
@@ -1140,12 +1145,14 @@ font-size: 1.2rem;
 }
 .accessories-container{
   position: relative;
-  width: 100%;
+  width: 98%;
   height: 400px;
   background: linear-gradient(rgba(236, 217, 227, 0.3), rgba(215, 229, 243, 0.8)), url(../../assets/images/alex-sorto--fowxtAtWW8-unsplash.jpg);
   background-size: cover;
   background-position: center;
+  margin: 0 auto;
   margin-bottom: 50px;
+
 }
 .accessories-content{
   margin-left: 100px;
@@ -1200,7 +1207,7 @@ font-size: 1.2rem;
   grid-auto-rows: minmax(150px, auto);
   grid-gap: 50px;
   display: grid;
-  max-width: 100%;
+  max-width: 98%;
   margin: 0 auto;
 }
 .accContent-container div{
@@ -1208,27 +1215,30 @@ font-size: 1.2rem;
   height: 300px;
 }
 .edit-pack{
-  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/IMG-0364.jpg);
+  // background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/IMG-0364.jpg);
+  background:url(../../assets/images/IMG-0364.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .edit-pack{
   p{
-    margin-top: 100%;
-  color: $light;
+    margin-top: 125%;
+  color: $dark;
+  z-index: 99;
   }
 }
 .modern-looks{
-  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/IMG-0377.PNG);
+  background:url(../../assets/images/IMG-0377.PNG);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .modern-looks{
   p{
-    margin-top: 100%;
-    color: $light;
+    margin-top: 125%;
+    color: $dark;
+    z-index: 99;
   }
 }
 .shop-sale{
@@ -1241,33 +1251,36 @@ font-size: 1.2rem;
   span{
     color: $light;
     font-size: 1.5rem;
-    display: none;
+    margin-top: 20%;
   }
   p{
-  margin-top: 100%;
-  color: $light;
+    margin-top: 110%;
+    color: $dark;
+    z-index: 99;
   }
 }
 .social-access{
-  background:  linear-gradient(rgba(0,0,0, 0.1), rgba(0,0,0, 0.9)),url(../../assets/images/insta.png);
+  background:url(../../assets/images/insta.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .social-access{
   p{
-    margin-top: 100%;
-    color: $light;
+    margin-top: 125%;
+    color: $dark;
+    z-index: 99;
   }
 }
 .newsletter-container{
   position: relative;
-  width: 100%;
+  width: 98%;
   height: 400px;
   background: linear-gradient(rgba(16, 16, 60, 0.7), rgba(16, 16, 60, 0.7)), url(../../assets/images/smile-1485850_1920.jpg);
   background-size: cover;
   background-position: 0 -100px;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }
 .newsletter-content{
   padding: 70px 0;
@@ -1324,9 +1337,9 @@ font-size: 1.2rem;
     background: linear-gradient(rgba(243, 159, 174, 0.2), rgba(243, 159, 174, 0.3)), url(../../assets/images/jessica-felicio-BzSfM6n_LIE-unsplash.jpg);
     background-size: cover;
     background-position: center;
-    // clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
     // clip-path: polygon(0 0, 100% 0, 100% 80%,0 100%);
-    clip-path: circle(155vh at 50% -90vh);
+    // clip-path: circle(155vh at 50% -90vh);
   }
   .hero_section .slider .caption{
     h1{
@@ -1370,7 +1383,6 @@ transition: 2s;
 }
 }
   .section-content{
-    margin-top: -20px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
   }
@@ -1378,9 +1390,13 @@ transition: 2s;
     grid-column: auto;
     grid-row: auto;
   }
+  .one{
+width: 100%;
+margin: 0;
+  }
   .two{
-   margin-left: -10px;
-   margin-top: -10px;
+ margin: 0;
+ margin-top: -10px;
   }
   .makeup_dets{
     padding: 70px 0;
@@ -1392,10 +1408,14 @@ transition: 2s;
   .three{
     grid-column: auto;
     grid-row: 3/5;
+    width: 100%;
+margin: 0;
   }
   .four{
     grid-column:auto;
     grid-row: 5/7;
+    width: 100%;
+margin: 0;
   }
   .access-container{
     p{
