@@ -7,13 +7,28 @@
   background-position: bottom -0.68rem right -14rem;
   background-color: #fbc180;
   @extend .container-fluid;
+  @media (max-width: 1024px) {
+    background-position: bottom right -14rem;
+  }
 
   &-container {
     width: 100%;
-    height: auto;
+    height: 100vh;
     color: $light;
     padding-top: 6rem;
     padding-left: 5rem;
+  }
+  @media (max-width: 1024px) {
+    &-container {
+      padding-top: 2rem;
+      padding-left: 2rem;
+    }
+  }
+  @media (max-width: 425px) {
+    &-container {
+      padding-top: 0.8rem;
+      padding-left: 0;
+    }
   }
   &-exclamation {
     width: 100px;
@@ -21,6 +36,12 @@
     font-weight: 300;
     display: block;
     transform: rotateZ(-28deg) translate(-20%, 15%);
+  }
+  @media (max-width: 425px) {
+    &-exclamation {
+      font-size: 1.8rem;
+      transform: rotateZ(-28deg) translate(5%, 24%);
+    }
   }
   &-error-num {
     font-size: 8.5rem;
@@ -30,11 +51,22 @@
       color: $dark;
     }
   }
+  @media (max-width: 425px) {
+    &-error-num {
+      font-size: 6rem;
+      text-align: center;
+      letter-spacing: 0.8rem;
+    }
+  }
   &-content {
     width: 385px;
     height: auto;
     text-align: center;
     transform: rotateZ(-7deg);
+    @media (max-width: 425px) {
+      transform: none;
+      width: 100%;
+    }
     &__heading {
       font-size: 1.4rem;
       margin-bottom: 1.2rem;
