@@ -4,17 +4,18 @@ import Video from "../../assets/video/showcase_video.mp4";
 import deliverytruckImage from "../../assets/resources/shipped.svg";
 import favoriteImage from "../../assets/resources/star.svg";
 import banner from "../../assets/images/bannergif.gif";
+import Layout from "../../components/layout/Layout";
 
 const Homepage = () => {
   return (
-    <div>
+    <Layout>
       <TopBanner />
       <HomeSecImage />
       <HomeSlogan />
       <PickSecBtn />
       <BannerSection />
       <ShopDisp />
-    </div>
+    </Layout>
   );
 };
 
