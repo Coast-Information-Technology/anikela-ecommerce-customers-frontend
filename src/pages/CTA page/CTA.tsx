@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MediaQuery from "react-responsive";
 import MegaMenu from "../../components/header/MegaMenu";
+import Layout from "../../components/layout/Layout";
 // import { SubNavBar } from "../../components/header/";
 
 const CTApage = () => {
   return (
-    <div>
+    <Layout>
       <MediaQuery minDeviceWidth={1024}>
         <MegaMenu />
       </MediaQuery>
@@ -15,7 +16,7 @@ const CTApage = () => {
       <AccessoriesSection />
       <QuickAccess />
       <SignUp_Newsletter />
-    </div>
+    </Layout>
   );
 };
 
@@ -29,38 +30,38 @@ const MainSection = () => {
     <div className="hero_section">
       <div className="slider">
         <div className="slide slide1">
-        <div className="caption">
-          <h1>Shop By Designer</h1>
-          <p>a passion for fashion. say it with style</p>
-          <button className="hero_discover-btn">Discover Now</button>
+          <div className="caption">
+            <h1>Shop By Designer</h1>
+            <p>a passion for fashion. say it with style</p>
+            <button className="hero_discover-btn">Discover Now</button>
           </div>
         </div>
         <div className="slide slide2">
           <div className="caption">
-          <h1>Shop By Designer</h1>
-          <p>a passion for fashion. say it with style</p>
-          <button className="hero_discover-btn">Discover Now</button>
+            <h1>Shop By Designer</h1>
+            <p>a passion for fashion. say it with style</p>
+            <button className="hero_discover-btn">Discover Now</button>
           </div>
         </div>
         <div className="slide slide3">
-        <div className="caption">
-          <h1>Shop By Designer</h1>
-          <p>a passion for fashion. say it with style</p>
-          <button className="hero_discover-btn">Discover Now</button>
+          <div className="caption">
+            <h1>Shop By Designer</h1>
+            <p>a passion for fashion. say it with style</p>
+            <button className="hero_discover-btn">Discover Now</button>
           </div>
         </div>
         <div className="slide slide4 ">
-        <div className="caption">
-          <h1>Shop By Designer</h1>
-          <p>a passion for fashion. say it with style</p>
-          <button className="hero_discover-btn">Discover Now</button>
+          <div className="caption">
+            <h1>Shop By Designer</h1>
+            <p>a passion for fashion. say it with style</p>
+            <button className="hero_discover-btn">Discover Now</button>
           </div>
         </div>
         <div className="slide slide1">
-        <div className="caption">
-          <h1>Shop By Designer</h1>
-          <p>a passion for fashion. say it with style</p>
-          <button className="hero_discover-btn">Discover Now</button>
+          <div className="caption">
+            <h1>Shop By Designer</h1>
+            <p>a passion for fashion. say it with style</p>
+            <button className="hero_discover-btn">Discover Now</button>
           </div>
         </div>
       </div>
