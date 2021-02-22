@@ -91,6 +91,57 @@ const SignUpAuthSection: React.FC = () => {
         <SocialAuthButton title="Google" />
       </div>
       <span>or use your email</span>
+      <form action="#" className="auth-form">
+        <div className="auth-form-row">
+          <label htmlFor="firstName" className="a11y-hidden">
+            First Name
+          </label>
+          <input
+            type="text"
+            className="auth-form-control"
+            placeholder="First Name"
+            id="firstName"
+          />
+          <label htmlFor="lastName" className="a11y-hidden">
+            Last Name
+          </label>
+          <input
+            type="text"
+            className="auth-form-control"
+            placeholder="Last Name"
+            id="lastName"
+          />
+        </div>
+        <label htmlFor="email" className="a11y-hidden">
+          Email
+        </label>
+        <input
+          type="text"
+          className="auth-form-control"
+          placeholder="Email"
+          id="email"
+        />
+        <div className="auth-form-row">
+          <label htmlFor="password" className="a11y-hidden">
+            Password
+          </label>
+          <input
+            type="password"
+            className="auth-form-control"
+            placeholder="Password"
+            id="password"
+          />
+          <label htmlFor="confirmPassword" className="a11y-hidden">
+            enter pasword again to confirm
+          </label>
+          <input
+            type="password"
+            className="auth-form-control"
+            placeholder="Confirm Password"
+            id="confirmPassword"
+          />
+        </div>
+      </form>
       <button type="submit" className="auth-btn--submit">
         Sign Up
       </button>
